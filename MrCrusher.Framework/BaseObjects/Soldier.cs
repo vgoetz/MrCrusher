@@ -26,13 +26,13 @@ namespace MrCrusher.Framework.BaseObjects {
         
         public EnterStatus CurrentEnterStatus { get; private set; }
 
-        private IGameObject _objectToEnterOrLeave;
-        public IGameObject ObjectToEnterOrLeave {
+        private ICanBeEntered _objectToEnterOrLeave;
+        public ICanBeEntered ObjectToEnterOrLeave {
             get { return _objectToEnterOrLeave; }
         }
 
-        private IGameObject _enteredObject;
-        public IGameObject EnteredObject {
+        private ICanBeEntered _enteredObject;
+        public ICanBeEntered EnteredObject {
             get { return _enteredObject; }
         }
 
@@ -92,7 +92,7 @@ namespace MrCrusher.Framework.BaseObjects {
             if (allObjectsInTheNear.Contains(this)) {
                 allObjectsInTheNear.Remove(this);
             }
-            List<IGameObject> allObjectsCouldBeEntered = allObjectsInTheNear.Where(obj => obj is ICanBeEntered && ((ICanBeEntered)obj).IsManned == false).ToList();
+            List<ICanBeEntered> allObjectsCouldBeEntered = allObjectsInTheNear.OfType<ICanBeEntered>().Where(obj => obj.IsManned == false).ToList();
 
             if (allObjectsCouldBeEntered.Any()) {
                 var nearestGameObjectToEnter = MapHelper.GetNearestGameObject(allObjectsCouldBeEntered, PositionCenter);
@@ -100,7 +100,7 @@ namespace MrCrusher.Framework.BaseObjects {
             }
         }
 
-        private void EnterObject(IGameObject objectToEnter) {
+        private void EnterObject(ICanBeEntered objectToEnter) {
 
             if (CurrentEnterStatus != EnterStatus.Outside ||
                 IsObjectToEnterInSight(objectToEnter) == false) {
@@ -126,6 +126,7 @@ namespace MrCrusher.Framework.BaseObjects {
 
         private void FinishEnteringMode() {
             _enteredObject = _objectToEnterOrLeave;
+            _enteredObject.IsManned = true;
             _objectToEnterOrLeave = null;
             DestinationRotationForStepwiseRotation = OrientationInDegrees;
             PlayerAsController.TakeAdditionallyControllOf(_enteredObject);
@@ -161,8 +162,9 @@ namespace MrCrusher.Framework.BaseObjects {
 
         private void FinishLeavingMode() {
             CanReseiveKeyCommands = true;
-
+            
             PlayerAsController.ReleaseAdditionallyControllOfAnObject();
+            _objectToEnterOrLeave.IsManned = false;
             GameObjectsInteractionDictionary.Remove(_objectToEnterOrLeave);
             _objectToEnterOrLeave = null;
 

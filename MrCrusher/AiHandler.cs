@@ -7,7 +7,7 @@ using MrCrusher.Framework.Game.Environment;
 namespace MrCrusher {
     public class AiHandler {
 
-        public static void AiPerforming() {
+        public static void PerformAi() {
             if (!GameEnv.Players.Any() || GameEnv.Players.All(p => p.CurrentControlledGameObject.Dead)) {
                 return;
             }
@@ -51,16 +51,18 @@ namespace MrCrusher {
                 }
 
                 var target = canTargetGameObjects.TargetedGameObject;
+                var targetCanBeEntered = target as ICanBeEntered;
+                bool targetIsUsefull = target != null && !target.Dead && target.Visible && (targetCanBeEntered == null || targetCanBeEntered.IsManned);
 
                 // AIMING
                 hasAimStrategy = gameObject as IHasAimStrategy;
-                if (hasAimStrategy != null && target != null && !target.Dead) {
+                if (hasAimStrategy != null && targetIsUsefull) {
                     hasAimStrategy.AI_SetAimTarget(target);
                 }
 
                 // SHOOTING
                 var hasShootStrategy = gameObject as IHasShootStrategy;
-                if (hasShootStrategy != null && target != null && !target.Dead) {
+                if (hasShootStrategy != null && targetIsUsefull) {
                     hasShootStrategy.AI_Shoot(target);
                 }
 
@@ -68,7 +70,7 @@ namespace MrCrusher {
                 var hasTriggerAttackStrategy = gameObject as IHasTriggerAttackStrategy;
                 if (hasTriggerAttackStrategy != null) {
 
-                    if (target != null && target.Dead) {
+                    if (target != null && !targetIsUsefull) {
                         gameObject.CurrentMission = null;
                         hasTriggerAttackStrategy.Stop();
                     }

@@ -4,8 +4,8 @@ namespace MrCrusher.Framework.BaseObjects.Interfaces {
     public interface ICanBeEntered : IGameObject {
 
         /// <summary>
-        /// Ist diese Object besetzt / betreten werden?
+        /// Ist diese Objekt besetzt?
         /// </summary>
-        bool IsManned { get; }
+        bool IsManned { get; set; }
     }
 }

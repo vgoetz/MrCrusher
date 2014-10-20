@@ -324,7 +324,7 @@ namespace MrCrusher {
                     GameEnv.AddRegisteredGameObjects();
 
                     MoveAndRotateLivingObjects();
-                    AiHandler.AiPerforming();
+                    AiHandler.PerformAi();
 
                     KeyboardInteractionHandler.HandleLocalPlayersGameSystemInputs();
                     KeyboardInteractionHandler.HandleAllPlayersGamePlayInputs();

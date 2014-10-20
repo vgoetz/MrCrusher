@@ -9,8 +9,8 @@ namespace MrCrusher.Framework.BaseObjects.Interfaces {
 
         EnterStatus CurrentEnterStatus { get; }
 
-        IGameObject ObjectToEnterOrLeave { get; }
-        IGameObject EnteredObject { get; }
+        ICanBeEntered ObjectToEnterOrLeave { get; }
+        ICanBeEntered EnteredObject { get; }
 
         void EnterObjectInFront();
         void LeaveObject();

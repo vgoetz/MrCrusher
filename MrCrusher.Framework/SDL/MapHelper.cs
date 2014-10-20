@@ -46,8 +46,8 @@ namespace MrCrusher.Framework.SDL
             }
         }
 
-        public static IGameObject GetNearestGameObject(IEnumerable<IGameObject> objects, Point dependsOnPoint) {
-            var distanceDictionary = new Dictionary<int, IGameObject>();
+        public static ICanBeEntered GetNearestGameObject(IEnumerable<ICanBeEntered> objects, Point dependsOnPoint) {
+            var distanceDictionary = new Dictionary<int, ICanBeEntered>();
             int minValue = 0;
 
             foreach (var gameObject in objects) {
