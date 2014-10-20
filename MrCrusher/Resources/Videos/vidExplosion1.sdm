@@ -1,0 +1,20 @@
+# Name;Offset-X;Offset-Y;Width;Height 
+#TransparentColor:Magenta
+sprite1;0;0;150;150 
+sprite2;151;0;150;150 
+sprite3;302;0;150;150 
+sprite4;453;0;150;150 
+sprite5;604;0;150;150 
+sprite6;755;0;150;150 
+sprite7;0;151;150;150 
+sprite8;151;151;150;150 
+sprite9;302;151;150;150 
+sprite10;453;151;150;150 
+sprite11;604;151;150;150 
+sprite12;755;151;150;150 
+sprite13;0;302;150;150 
+sprite14;151;302;150;150 
+sprite15;302;302;150;150 
+sprite16;453;302;150;150 
+sprite17;604;302;150;150 
+sprite18;755;302;150;150 

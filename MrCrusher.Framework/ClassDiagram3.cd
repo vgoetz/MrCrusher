@@ -1,0 +1,670 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MrCrusher.Framework.AI.AimAtObjectInstantlyStrategy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>AI\AimAtObjectInstantlyStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MrCrusher.Framework.AI.AimAtTargetWithRotationStepStrategy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>AI\AimAtTargetWithRotationStepStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MrCrusher.Framework.AI.AttackObjectMission" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAgAAAAAQAAAAA=</HashCode>
+      <FileName>AI\AttackObjectMission.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MrCrusher.Framework.AI.AttackPointMission" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAgAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>AI\AttackPointMission.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MrCrusher.Framework.AI.MoveDirectlyAndCloseToTargetStrategy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AI\MoveDirectlyAndCloseToTargetStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MrCrusher.Framework.AI.MoveDirectlyToTargetStrategy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AI\MoveDirectlyToTargetStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MrCrusher.Framework.AI.ShootAtTargetInWeaponRageStrategy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AI\ShootAtTargetInWeaponRageStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MrCrusher.Framework.AI.ShootAtTargetStrategy" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AI\ShootAtTargetStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MrCrusher.Framework.AI.SimpleAI" Collapsed="true">
+    <Position X="28.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AI\SimpleAI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.AI.TriggerAttackAfterHit" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>AI\TriggerAttackAfterHit.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MrCrusher.Framework.AI.TriggerAttackIfInViewRage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>AI\TriggerAttackIfInViewRage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.Bunker" Collapsed="true">
+    <Position X="8.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAIwAJgAJABhAgFgACEAAACADjEAUEoAAAIAINgQA=</HashCode>
+      <FileName>BaseObjects\Bunker.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.GameObject" Collapsed="true">
+    <Position X="8.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBSqBAEAAgADEAwMIEAAAAAAQBAAAAIAQAACgEMMAg=</HashCode>
+      <FileName>BaseObjects\GameObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.MovingObject" Collapsed="true">
+    <Position X="7.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FEAIAQIAAAAAAAAgIEgACAIAEAACQAIAIAAAAAAIAAA=</HashCode>
+      <FileName>BaseObjects\MovingObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.Projectile" Collapsed="true">
+    <Position X="2.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAgAAAACEAAAAAAAAAAAAhAAABAAAAAAA=</HashCode>
+      <FileName>BaseObjects\Projectile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.Rifle" Collapsed="true">
+    <Position X="10.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjects\Rifle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.RifleShot" Collapsed="true">
+    <Position X="1.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAgAAACAAACAAAAAAAAAIAAABBAAAAAAA=</HashCode>
+      <FileName>BaseObjects\RifleShot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.RotatingObject" Collapsed="true">
+    <Position X="9.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAIAAAAhBBIAAAAABAAAAAEAACACABAQAIAAA=</HashCode>
+      <FileName>BaseObjects\RotatingObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.Soldier" Collapsed="true">
+    <Position X="6.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgEIgANgAJgIQAhIAApCAAACAUBkgYEMEAAKAQIABI=</HashCode>
+      <FileName>BaseObjects\Soldier.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.Tank" Collapsed="true">
+    <Position X="13" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAIxIJgCJBJhAgNgAgGBAACAGjkiUEoAAAIAINgwA=</HashCode>
+      <FileName>BaseObjects\Tank.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.TankShot" Collapsed="true">
+    <Position X="4" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAgAAACAAACAAAAAAAAAIAAABBAAAAAAA=</HashCode>
+      <FileName>BaseObjects\TankShot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.Weapon" Collapsed="true">
+    <Position X="10.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAAAAAAAAABAACAAAIQAAAAIAAAAABAEAAAABAAAA=</HashCode>
+      <FileName>BaseObjects\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.EnemysSoldierFactory" Collapsed="true">
+    <Position X="20.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\EnemysSoldierFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.EnemysTankFactory" Collapsed="true">
+    <Position X="15.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\EnemysTankFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.PlayersBunkerFactory" Collapsed="true">
+    <Position X="17" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\PlayersBunkerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.PlayersSoldierFactory" Collapsed="true">
+    <Position X="18.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\PlayersSoldierFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.PlayersTankFactory" Collapsed="true">
+    <Position X="13.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\PlayersTankFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.RifleShotFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\RifleShotFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.TankShotFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\TankShotFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.Interfaces.IBunkerFactory" Collapsed="true">
+    <Position X="17" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\Interfaces\IBunkerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.Interfaces.IEnemysSoldierFactory" Collapsed="true">
+    <Position X="20.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\Interfaces\IEnemysSoldierFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.Interfaces.IEnemysTankFactory" Collapsed="true">
+    <Position X="15.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\Interfaces\IEnemysTankFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.Interfaces.IPlayersBunkerFactory" Collapsed="true">
+    <Position X="17" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\Interfaces\IPlayersBunkerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.Interfaces.IPlayersSoldierFactory" Collapsed="true">
+    <Position X="18.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\Interfaces\IPlayersSoldierFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.Interfaces.IPlayersTankFactory" Collapsed="true">
+    <Position X="13.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\Interfaces\IPlayersTankFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.Interfaces.ISoldierFactory" Collapsed="true">
+    <Position X="19.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\Interfaces\ISoldierFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.Interfaces.ITankFactory" Collapsed="true">
+    <Position X="14.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\Interfaces\ITankFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.Core.Calculator" Collapsed="true">
+    <Position X="30.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAgCgAAAAAAAAEAAAAAAIAAAAAgAgAAAIAAAAAA=</HashCode>
+      <FileName>Core\Calculator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.Core.CollisionDetection" Collapsed="true">
+    <Position X="32" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAQAAAAAAAAAAAAAAAAAAAAQAABAAAAAA=</HashCode>
+      <FileName>Core\CollisionDetection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.Core.CollisionHandler" Collapsed="true">
+    <Position X="23.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\CollisionHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.Core.Degree" Collapsed="true">
+    <Position X="25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAABAEwAEABDAAAAAAAIAAAAAgAAAAAiA=</HashCode>
+      <FileName>Core\Degree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.Core.PublicFrameworkEnums" Collapsed="true">
+    <Position X="32" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\PublicFrameworkEnums.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.Game.Environment.GameEnv" Collapsed="true">
+    <Position X="28.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIAAtDAgAEAEAhUAEESCQAAIKIHgAAMAACAAEAAQAAA=</HashCode>
+      <FileName>Game.Environment\GameEnv.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.Game.Environment.SoundHandler" Collapsed="true">
+    <Position X="30.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAIAACUIBACgCACgCgAJAAAABAEAQCEAACgQgAAA=</HashCode>
+      <FileName>MediaManagement\SoundHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.GameObjectTypeConstructionPlan" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>GameObjectTypeConstructionPlan.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MrCrusher.Framework.GameObjectTypeConstructionPlanCollection" Collapsed="true">
+    <Position X="32" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAIABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjectTypeConstructionPlanCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.MediaManagement.AbstractContainer" Collapsed="true">
+    <Position X="2.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAIAAAAAAgAAAA=</HashCode>
+      <FileName>MediaManagement\AbstractContainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MrCrusher.Framework.MediaManagement.ImageContainer" Collapsed="true">
+    <Position X="3.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEEAAAACAAAAAAAAAAAAAQAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>MediaManagement\ImageContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.MediaManagement.SpriteVideoData" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>MediaManagement\SpriteVideoData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MrCrusher.Framework.MediaManagement.SpriteVideoPlayer" Collapsed="true">
+    <Position X="23.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAIACAAAAAAAQAAAAAAAgAAAACAAgIAMIAAAAAgACAI=</HashCode>
+      <FileName>MediaManagement\SpriteVideoPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.MediaManagement.VideoContainer" Collapsed="true">
+    <Position X="1.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAEAAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>MediaManagement\VideoContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.MediaManagement.VideoPlayerCollection" Collapsed="true">
+    <Position X="23.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAQAAAAAAAAAABAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>MediaManagement\VideoPlayerCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.MediaManagement.VideoStartParameter" Collapsed="true">
+    <Position X="25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAQAAAAAAACAAAIAAAAAAABAAAAAA=</HashCode>
+      <FileName>MediaManagement\VideoStartParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.SDL.ImageHelper" Collapsed="true">
+    <Position X="23.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAQAAAQAAAAAAAAAAAAAAAAAAAASAAAAAAAAA=</HashCode>
+      <FileName>SDL\ImageHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.SDL.MapHelper" Collapsed="true">
+    <Position X="25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAABAAAAAAAAAAAAAAAAAAgAAAAAAAAIAAAAAg=</HashCode>
+      <FileName>SDL\MapHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.SDL.MusicHelper" Collapsed="true">
+    <Position X="30.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>SDL\MusicHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.SDL.VideoDriverSettings" Collapsed="true">
+    <Position X="30.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>SDL\VideoDriverSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.SDL.VideoHelper" Collapsed="true">
+    <Position X="32" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>SDL\VideoHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.SpecialObjects.ExplosionCascade" Collapsed="true">
+    <Position X="9.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAoAAEAAAABAAAAEAAAAAAAAAAEAAAAAAAAIAAAAA=</HashCode>
+      <FileName>SpecialObjects\ExplosionCascade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.SpecialObjectsFactories.ExplosionCascadeFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SpecialObjectsFactories\ExplosionsFactoryFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Struct Name="MrCrusher.Framework.SDL.SdmRectangle" Collapsed="true">
+    <Position X="23.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAAAAAAAA=</HashCode>
+      <FileName>SDL\SdmRectangle.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="MrCrusher.Framework.AI.HasAI" Collapsed="true">
+    <Position X="23.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AI\HasAI.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.AI.IAiMission" Collapsed="true">
+    <Position X="25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>AI\IAiMission.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.AI.IAimStrategy" Collapsed="true">
+    <Position X="26.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>AI\IAimStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.AI.IHasAimStrategy" Collapsed="true">
+    <Position X="3.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>AI\IHasAimStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.AI.IHasMoveStrategy" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAIAAAAAA=</HashCode>
+      <FileName>AI\IHasMoveStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.AI.IHasShootStrategy" Collapsed="true">
+    <Position X="20.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AI\IHasShootStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.AI.IHasTriggerAttackStrategy" Collapsed="true">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAIAAAAAA=</HashCode>
+      <FileName>AI\IHasTriggerAttackStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.AI.IMoveStrategy" Collapsed="true">
+    <Position X="23.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AI\IMoveStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.AI.IShootStrategy" Collapsed="true">
+    <Position X="26.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AI\IShootStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.AI.ITriggerAttackStrategy" Collapsed="true">
+    <Position X="30.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>AI\ITriggerAttackStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.BaseObjects.Interfaces.IBunker" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>BaseObjects\Interfaces\IBunker.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.BaseObjects.Interfaces.ICanControlledByHumanPlayer" Collapsed="true">
+    <Position X="28.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAgAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjects\Interfaces\ICanControlledByHumanPlayer - Copy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.BaseObjects.Interfaces.ICanBeEntered" Collapsed="true">
+    <Position X="9" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjects\Interfaces\ICanControlledByHumanPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.BaseObjects.Interfaces.IGameObject" Collapsed="true">
+    <Position X="11.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBSKAAAAAgACEAgMAEAAAAAAAAAAAAIAQAACgEEMAA=</HashCode>
+      <FileName>BaseObjects\Interfaces\IGameObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.BaseObjects.Interfaces.IHasPrimaryWeapon" Collapsed="true">
+    <Position X="14" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjects\Interfaces\IHasPrimaryWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.BaseObjects.Interfaces.IHasSecondaryWeapon" Collapsed="true">
+    <Position X="16" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjects\Interfaces\IHasSecondaryWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.BaseObjects.Interfaces.IHitable" Collapsed="true">
+    <Position X="18.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjects\Interfaces\IHitable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.BaseObjects.Interfaces.IRotatingObject" Collapsed="true">
+    <Position X="25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAhAAAAAAAABAAAAAEAACACABAQAAAAA=</HashCode>
+      <FileName>BaseObjects\Interfaces\IRotatingObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.BaseObjects.Interfaces.ISoldier" Collapsed="true">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIgAAAAAAAJAAAAAAAAAgAAAAAAAAQAAAA=</HashCode>
+      <FileName>BaseObjects\Interfaces\ISoldier.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.BaseObjects.Interfaces.ITank" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>BaseObjects\Interfaces\ITank.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.BaseObjectsFactories.Interfaces.IShotFactory" Collapsed="true">
+    <Position X="28.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\Interfaces\IShotFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.IGameObjectTypeConstructionPlan" Collapsed="true">
+    <Position X="32" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>IGameObjectTypeConstructionPlan.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.SpecialObjectsFactories.IExplosionCascadeFactory" Collapsed="true">
+    <Position X="30.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SpecialObjectsFactories\IExplosionCascadeFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="MrCrusher.Framework.BaseObjects.PlayersBunkerType" Collapsed="true">
+    <Position X="28.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>BaseObjects\GameObjectTypeEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MrCrusher.Framework.BaseObjects.PlayersTankType" Collapsed="true">
+    <Position X="32" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAEAAAA=</HashCode>
+      <FileName>BaseObjects\GameObjectTypeEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MrCrusher.Framework.BaseObjects.EnemysTankType" Collapsed="true">
+    <Position X="25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>BaseObjects\GameObjectTypeEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MrCrusher.Framework.BaseObjects.ShotType" Collapsed="true">
+    <Position X="25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABCAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>BaseObjects\GameObjectTypeEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MrCrusher.Framework.BaseObjects.PlayersSoldierType" Collapsed="true">
+    <Position X="30.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAEAAAA=</HashCode>
+      <FileName>BaseObjects\GameObjectTypeEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MrCrusher.Framework.BaseObjects.EnemysSoldierType" Collapsed="true">
+    <Position X="23.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAIA0AAAAAAAAAAEAAAA=</HashCode>
+      <FileName>BaseObjects\GameObjectTypeEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MrCrusher.Framework.BaseObjects.Interfaces.EnterStatus" Collapsed="true">
+    <Position X="26.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAgAAAAAAAQAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjects\Interfaces\ISoldier.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MrCrusher.Framework.Core.Quadrant" Collapsed="true">
+    <Position X="23.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAACAAAAE=</HashCode>
+      <FileName>Core\Degree.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

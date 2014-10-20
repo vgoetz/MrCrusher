@@ -1,0 +1,12 @@
+# Name;Offset-X;Offset-Y;Width;Height 
+#TransparentColor:White
+sprite1;0;0;10;10 
+sprite2;11;0;10;10 
+sprite3;22;0;10;10 
+sprite4;33;0;10;10 
+sprite5;44;0;10;10 
+sprite6;55;0;10;10 
+sprite7;66;0;10;10 
+sprite8;77;0;10;10 
+sprite9;88;0;10;10 
+sprite10;99;0;10;10 

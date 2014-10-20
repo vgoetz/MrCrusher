@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MrCrusher.Framework.BaseObjects.GameObject" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBSqBAEAAgADEAwMIEAAAAAAQBAAAAIAQAACgEMMAg=</HashCode>
+      <FileName>BaseObjects\GameObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.MovingObject" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FEAIAQIAAAAAAAAgIEgACAIAEAACQAIAIAAAAAAIAAA=</HashCode>
+      <FileName>BaseObjects\MovingObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.Projectile" Collapsed="true">
+    <Position X="8.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAgAAAACEAAAAAAAAAAAAhAAABAAAAAAA=</HashCode>
+      <FileName>BaseObjects\Projectile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.Rifle" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjects\Rifle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.RifleShot" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAgAAACAAACAAAAAAAAAIAAABBAAAAAAA=</HashCode>
+      <FileName>BaseObjects\RifleShot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.Soldier" Collapsed="true">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgEIgANgAJgIQAhIAApCAAACAUBkgYEMEAAKAQIABI=</HashCode>
+      <FileName>BaseObjects\Soldier.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.Tank" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAIwIJgCZBBhAgNgAiGAAACAGjkCUEoAAAIAINgwA=</HashCode>
+      <FileName>BaseObjects\Tank.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.TankShot" Collapsed="true">
+    <Position X="9.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAgAAACAAACAAAAAAAAAIAAABBAAAAAAA=</HashCode>
+      <FileName>BaseObjects\TankShot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjects.Weapon" Collapsed="true">
+    <Position X="4.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAAAAAAAAABAACAAAIQAAAAIAAAAABAEAAAABAAAA=</HashCode>
+      <FileName>BaseObjects\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.Core.Calculator" Collapsed="true">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAgCgAIAAAAAAEAAAAAAAAAAAAgAgAAAIAAAAAA=</HashCode>
+      <FileName>Core\Calculator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.Core.CollisionDetection" Collapsed="true">
+    <Position X="17" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAQAAAAAAAAQAABAAAAAA=</HashCode>
+      <FileName>Core\CollisionDetection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.Core.CollisionHandler" Collapsed="true">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\CollisionHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.Core.PublicFrameworkEnums" Collapsed="true">
+    <Position X="17" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\PublicFrameworkEnums.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.EnemysTankFactory" Collapsed="true">
+    <Position X="0.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\EnemysTankFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.Interfaces.IEnemysTankFactory" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\Interfaces\IEnemysTankFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.Interfaces.IEnemysSoldierFactory" Collapsed="true">
+    <Position X="5.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\Interfaces\IEnemysSoldierFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.Interfaces.IPlayersBunkerFactory" Collapsed="true">
+    <Position X="2.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\Interfaces\IPlayersBunkerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.Interfaces.ISoldierFactory" Collapsed="true">
+    <Position X="5.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\Interfaces\ISoldierFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.Interfaces.IBunkerFactory" Collapsed="true">
+    <Position X="1.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\Interfaces\IBunkerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.EnemysSoldierFactory" Collapsed="true">
+    <Position X="5.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\EnemysSoldierFactory.cs</FileName>
+      <NewMemberFileName>Factories\PlayersSoldierFactory.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.BaseObjectsFactories.PlayersBunkerFactory" Collapsed="true">
+    <Position X="2.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\PlayersBunkerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.SDL.ImageHelper" Collapsed="true">
+    <Position X="20.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAQAAAQAAAAAAAAAAAAAAAAAAAASAAAAAAAAA=</HashCode>
+      <FileName>SDL\ImageHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.SDL.VideoDriverSettings" Collapsed="true">
+    <Position X="15.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>SDL\VideoDriverSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MrCrusher.Framework.SDL.MusicHelper" Collapsed="true">
+    <Position X="20.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>SDL\MusicHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="MrCrusher.Framework.SDL.SdmRectangle" Collapsed="true">
+    <Position X="15.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAAAAAAAA=</HashCode>
+      <FileName>SDL\SdmRectangle.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="MrCrusher.Framework.BaseObjects.Interfaces.IHasPrimaryWeapon" Collapsed="true">
+    <Position X="9.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjects\Interfaces\IHasPrimaryWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.BaseObjects.Interfaces.IHasSecondaryWeapon" Collapsed="true">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjects\Interfaces\IHasSecondaryWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.BaseObjects.Interfaces.IHitable" Collapsed="true">
+    <Position X="15.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjects\Interfaces\IHitable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.BaseObjects.Interfaces.ISoldier" Collapsed="true">
+    <Position X="9.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIgAAAAAAAJAAAAAAAAAgAAAAAAAAQAAAA=</HashCode>
+      <FileName>BaseObjects\Interfaces\ISoldier.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.BaseObjects.Interfaces.IBunker" Collapsed="true">
+    <Position X="9.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>BaseObjects\Interfaces\IBunker.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MrCrusher.Framework.BaseObjectsFactories.Interfaces.IShotFactory" Collapsed="true">
+    <Position X="17" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseObjectsFactories\Interfaces\IShotFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="MrCrusher.Framework.BaseObjects.PlayersBunkerType" Collapsed="true">
+    <Position X="20.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>BaseObjects\GameObjectTypeEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MrCrusher.Framework.BaseObjects.EnemysTankType" Collapsed="true">
+    <Position X="17" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>BaseObjects\GameObjectTypeEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MrCrusher.Framework.BaseObjects.ShotType" Collapsed="true">
+    <Position X="15.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABCAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>BaseObjects\GameObjectTypeEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MrCrusher.Framework.BaseObjects.PlayersSoldierType" Collapsed="true">
+    <Position X="18.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAEAAAA=</HashCode>
+      <FileName>BaseObjects\GameObjectTypeEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MrCrusher.Framework.BaseObjects.EnemysSoldierType" Collapsed="true">
+    <Position X="15.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAIA0AAAAAAAAAAEAAAA=</HashCode>
+      <FileName>BaseObjects\GameObjectTypeEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

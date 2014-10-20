@@ -1,0 +1,8 @@
+# Name;Offset-X;Offset-Y;Width;Height;Alpha
+#TransparentColor:Magenta
+sprite1;0;0;26;26 
+sprite2;27;0;26;26 
+sprite3;54;0;26;26 
+sprite4;81;0;26;26 
+sprite5;108;0;26;26 
+sprite6;135;0;26;26 

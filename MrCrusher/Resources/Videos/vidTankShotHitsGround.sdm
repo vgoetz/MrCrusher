@@ -1,0 +1,24 @@
+# Name;Offset-X;Offset-Y;Width;Height;Alpha
+#TransparentColor:White
+sprite1;0;0;20;20 
+sprite2;20;0;20;20 
+sprite3;40;0;20;20 
+sprite4;60;0;20;20 
+sprite5;80;0;20;20 
+sprite6;0;20;20;20 
+sprite7;20;20;20;20 
+sprite8;40;20;20;20 
+sprite9;60;20;20;20 
+sprite10;80;20;20;20 
+sprite11;0;40;20;20 
+sprite12;20;40;20;20;240
+sprite13;40;40;20;20;220 
+sprite14;60;40;20;20;200
+sprite15;80;40;20;20;180 
+sprite16;0;60;20;20;160
+sprite17;20;60;20;20;140 
+sprite18;40;60;20;20;120 
+sprite19;60;60;20;20;100 
+sprite20;80;60;20;20;80 
+sprite21;0;80;20;20 ;60 
+sprite22;20;80;20;20;40

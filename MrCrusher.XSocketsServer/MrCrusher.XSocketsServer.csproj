@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F13917CA-53B7-45CA-8F62-E4BAEB5AA0B5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MrCrusher.XSocketsServer</RootNamespace>
+    <AssemblyName>MrCrusher.XSocketsServer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Dropbox\MrCrusher\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Panzer.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SdlDotNet, Version=6.1.0.0, Culture=neutral, PublicKeyToken=26ad4f7e10c61408, processorArchitecture=MSIL" />
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\packages\XSockets.Core.3.0.6\lib\net40\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XSockets.Controllers">
+      <HintPath>..\packages\XSockets.Server.3.0.6\lib\net40\XSockets.Controllers.dll</HintPath>
+    </Reference>
+    <Reference Include="XSockets.Core">
+      <HintPath>..\packages\XSockets.Core.3.0.6\lib\net40\XSockets.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="XSockets.Core.Common">
+      <HintPath>..\packages\XSockets.Core.3.0.6\lib\net40\XSockets.Core.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="XSockets.Core.Communication">
+      <HintPath>..\packages\XSockets.Server.3.0.6\lib\net40\XSockets.Core.Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="XSockets.Plugin.Framework">
+      <HintPath>..\packages\XSockets.Plugin.Framework.1.4.3\lib\XSockets.Plugin.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="XSockets.Protocol">
+      <HintPath>..\packages\XSockets.Server.3.0.6\lib\net40\XSockets.Protocol.dll</HintPath>
+    </Reference>
+    <Reference Include="XSockets.Serialization">
+      <HintPath>..\packages\XSockets.Core.3.0.6\lib\net40\XSockets.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="XSockets.Server">
+      <HintPath>..\packages\XSockets.Server.3.0.6\lib\net40\XSockets.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="XSockets.WebRTC">
+      <HintPath>..\packages\XSockets.Server.3.0.6\lib\net40\XSockets.WebRTC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MyErrorInterceptor.cs" />
+    <Compile Include="GameConnectionController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XSocketsServerProgram.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Panzer.ico" />
+    <Content Include="XSocketsNET\ServerExample\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MrCrusher.Framework\MrCrusher.Framework.csproj">
+      <Project>{52cb0108-4311-4586-acab-fb9352740aed}</Project>
+      <Name>MrCrusher.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MrCrusher\MrCrusher.csproj">
+      <Project>{753cbd95-1d27-4adc-a64e-d08d538fc99f}</Project>
+      <Name>MrCrusher</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

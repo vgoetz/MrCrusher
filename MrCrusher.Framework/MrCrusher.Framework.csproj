@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52CB0108-4311-4586-ACAB-FB9352740AED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MrCrusher.Framework</RootNamespace>
+    <AssemblyName>MrCrusher.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Dropbox\MrCrusher\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+    <Reference Include="SdlDotNet">
+      <HintPath>..\MrCrusher\SdlDotNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AI\MoveToPointMission.cs" />
+    <Compile Include="AI\AimAtObjectInstantlyStrategy.cs" />
+    <Compile Include="AI\AimAtTargetWithRotationStepStrategy.cs" />
+    <Compile Include="AI\AttackObjectMission.cs" />
+    <Compile Include="AI\IAiMission.cs" />
+    <Compile Include="AI\IAimStrategy.cs" />
+    <Compile Include="AI\IHasAimStrategy.cs" />
+    <Compile Include="AI\IHasMoveStrategy.cs" />
+    <Compile Include="AI\ICanTargetGameObjects.cs" />
+    <Compile Include="AI\IMoveStrategy.cs" />
+    <Compile Include="AI\IHasShootStrategy.cs" />
+    <Compile Include="AI\IShootStrategy.cs" />
+    <Compile Include="AI\ITriggerAttackStrategy.cs" />
+    <Compile Include="AI\IHasTriggerAttackStrategy.cs" />
+    <Compile Include="AI\TriggerAttackAfterHit.cs" />
+    <Compile Include="AI\MoveDirectlyAndCloseToTargetStrategy.cs" />
+    <Compile Include="AI\ShootAtTargetStrategy.cs" />
+    <Compile Include="AI\TriggerAttackIfInViewRage.cs" />
+    <Compile Include="AI\MoveDirectlyToTargetStrategy.cs" />
+    <Compile Include="AI\ShootAtTargetInWeaponRageStrategy.cs" />
+    <Compile Include="BaseObjectsFactories\Interfaces\IPlayersBunkerFactory.cs" />
+    <Compile Include="BaseObjectsFactories\Interfaces\IBunkerFactory.cs" />
+    <Compile Include="BaseObjectsFactories\PlayersBunkerFactory.cs" />
+    <Compile Include="BaseObjectsFactories\FlyingGranadeFactory.cs" />
+    <Compile Include="BaseObjects\GameObject.cs" />
+    <Compile Include="BaseObjects\GameObjectTypeEnum.cs" />
+    <Compile Include="BaseObjects\Interfaces\ICanBeEntered.cs" />
+    <Compile Include="BaseObjects\Interfaces\ICanControlledByHumanPlayer.cs" />
+    <Compile Include="BaseObjects\Interfaces\ICanSmash.cs" />
+    <Compile Include="BaseObjects\Interfaces\IGameObject.cs" />
+    <Compile Include="BaseObjects\Interfaces\IHasPrimaryWeapon.cs" />
+    <Compile Include="BaseObjects\Interfaces\IHasSecondaryWeapon.cs" />
+    <Compile Include="BaseObjects\Interfaces\IHitable.cs" />
+    <Compile Include="BaseObjects\Interfaces\IBunker.cs" />
+    <Compile Include="BaseObjects\Interfaces\ISmashable.cs" />
+    <Compile Include="BaseObjects\GranadeBelt.cs" />
+    <Compile Include="BaseObjects\Granade.cs" />
+    <Compile Include="BaseObjects\RotatingObject.cs" />
+    <Compile Include="BaseObjects\Interfaces\IRotatingObject.cs" />
+    <Compile Include="BaseObjects\Interfaces\ISoldier.cs" />
+    <Compile Include="BaseObjects\Interfaces\ITank.cs" />
+    <Compile Include="BaseObjects\MovingObject.cs" />
+    <Compile Include="BaseObjects\Projectile.cs" />
+    <Compile Include="BaseObjects\Rifle.cs" />
+    <Compile Include="BaseObjects\RifleShot.cs" />
+    <Compile Include="BaseObjects\Soldier.cs" />
+    <Compile Include="BaseObjects\Bunker.cs" />
+    <Compile Include="BaseObjects\Tank.cs" />
+    <Compile Include="BaseObjects\TankShot.cs" />
+    <Compile Include="BaseObjects\Weapon.cs" />
+    <Compile Include="Core\Calculator.cs" />
+    <Compile Include="Core\CollisionDetection.cs" />
+    <Compile Include="Core\CollisionHandler.cs" />
+    <Compile Include="Core\Degree.cs" />
+    <Compile Include="Core\PublicFrameworkEnums.cs" />
+    <Compile Include="Drawable\Sprite.cs" />
+    <Compile Include="Drawable\SpriteInfo.cs" />
+    <Compile Include="Game.Environment\GameEnv.cs" />
+    <Compile Include="BaseObjectsFactories\Interfaces\IEnemysSoldierFactory.cs" />
+    <Compile Include="BaseObjectsFactories\EnemysSoldierFactory.cs" />
+    <Compile Include="GameConditions\GameRunningConditions.cs" />
+    <Compile Include="GameConditions\GameStartupConditions.cs" />
+    <Compile Include="GameObjectTypeConstructionPlan.cs" />
+    <Compile Include="GameObjectTypeConstructionPlanCollection.cs" />
+    <Compile Include="IGameObjectTypeConstructionPlan.cs" />
+    <Compile Include="Input\KeyboardAndMouseInteractionTO.cs" />
+    <Compile Include="Input\MouseInteractionHandler.cs" />
+    <Compile Include="Input\KeyboardInteractionHandler.cs" />
+    <Compile Include="Input\LocalInputEventHandler.cs" />
+    <Compile Include="Input\LocalKeyboardEventHandler.cs" />
+    <Compile Include="Input\LocalMouseEventHandler.cs" />
+    <Compile Include="MediaManagement\SoundHandler.cs" />
+    <Compile Include="MediaManagement\AbstractContainer.cs" />
+    <Compile Include="MediaManagement\ImageContainer.cs" />
+    <Compile Include="MediaManagement\VideoPlayerCollection.cs" />
+    <Compile Include="MediaManagement\SpriteVideoData.cs" />
+    <Compile Include="MediaManagement\VideoContainer.cs" />
+    <Compile Include="MediaManagement\VideoStartParameter.cs" />
+    <Compile Include="Drawable\ImageTransferObject.cs" />
+    <Compile Include="Drawable\IDrawableObject.cs" />
+    <Compile Include="Drawable\IImageTransferObject.cs" />
+    <Compile Include="Player\GameSessionTransferObject.cs" />
+    <Compile Include="Player\IGameSessionTransferObject.cs" />
+    <Compile Include="Player\IPlayerTo.cs" />
+    <Compile Include="Player\PlayerTo.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Input\KeyboardInteraction.cs" />
+    <Compile Include="Input\MouseInteraction.cs" />
+    <Compile Include="SDL\MapHelper.cs" />
+    <Compile Include="SDL\VideoHelper.cs" />
+    <Compile Include="SDL\ImageHelper.cs" />
+    <Compile Include="SDL\VideoDriverSettings.cs" />
+    <Compile Include="SDL\SdmRectangle.cs" />
+    <Compile Include="SDL\MusicHelper.cs" />
+    <Compile Include="MediaManagement\SpriteVideoPlayer.cs" />
+    <Compile Include="BaseObjectsFactories\EnemysTankFactory.cs" />
+    <Compile Include="BaseObjectsFactories\Interfaces\IEnemysTankFactory.cs" />
+    <Compile Include="BaseObjectsFactories\Interfaces\IPlayersSoldierFactory.cs" />
+    <Compile Include="BaseObjectsFactories\Interfaces\IPlayersTankFactory.cs" />
+    <Compile Include="BaseObjectsFactories\Interfaces\IShotFactory.cs" />
+    <Compile Include="BaseObjectsFactories\Interfaces\ISoldierFactory.cs" />
+    <Compile Include="BaseObjectsFactories\Interfaces\ITankFactory.cs" />
+    <Compile Include="BaseObjectsFactories\PlayersSoldierFactory.cs" />
+    <Compile Include="BaseObjectsFactories\PlayersTankFactory.cs" />
+    <Compile Include="BaseObjectsFactories\RifleShotFactory.cs" />
+    <Compile Include="BaseObjectsFactories\TankShotFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecialObjectsFactories\IExplosionCascadeFactory.cs" />
+    <Compile Include="SpecialObjectsFactories\ExplosionsFactoryFactory.cs" />
+    <Compile Include="SpecialObjects\ExplosionCascade.cs" />
+    <Compile Include="Player\Player.cs" />
+    <Compile Include="Input\PlayersInteraction.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="jpeg.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libfreetype-6.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libogg-0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libpng12-0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libtiff-3.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libvorbis-0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libvorbisfile-3.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mikmod.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Readme-gfx.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Readme-image.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Readme-mixer.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Readme-net.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Readme-SDL.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Readme-smpeg.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Readme-ttf.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SDL.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SDL_gfx.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SDL_image.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SDL_mixer.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SDL_net.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SDL_ttf.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="smpeg.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tao.Sdl.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zlib1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BaseObjects\BaseObject\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
