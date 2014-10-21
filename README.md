@@ -44,7 +44,7 @@ E - Ein- bzw. aussteigen in einen Panzer oder Bunker
 
 Sonstiges:
 ----------
-STRG+D - Sofortiger Tod
+STRG+D - Sofortiger Tod<br>
 R - Restart (funktioniert nur am Server)
 ESC - Spiel beenden
 Mausrad drücken - Teleportation an diese Stelle (für Testzwecke)
