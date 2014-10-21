@@ -37,11 +37,10 @@ D - nach rechts drehen / wenden
 
 Drehung des Soldaten / Drehung des Panzerturms mit der Maus. Diese drehen sich in die Richtung des Mauszeigers.
 
-Linke Maustaste - Primäre Waffe 
-Rechte Maustaste - Sekundäre Waffe 
+Linke Maustaste - Primäre Waffe
+Rechte Maustaste - Sekundäre Waffe
 
 E - Ein- bzw. aussteigen in einen Panzer oder Bunker
-
 
 Sonstiges:
 ----------
