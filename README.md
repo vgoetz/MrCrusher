@@ -5,18 +5,18 @@ yet another cool 2D tank game
 
 
 Changelog: Version 0.251
-- Bugfixing: AI Zielauswahl und Bewegung, Collisiondetection, Game Reset, ...
-- Granaten für Soldaten hinzugefügt
-- Start-Parameter hinzugefügt
+- Bugfixing: AI Zielauswahl und Bewegung, Collisiondetection, Game Reset, ...<br>
+- Granaten für Soldaten hinzugefügt<br>
+- Start-Parameter hinzugefügt<br>
 
 Changelog: Version 0.228
-- Die Keyboard und Mouse-Daten eines Clients werden zum Server geschickt und dort verarbeitet (wie auch die des am Server lokalen Spielers auch).
-- Server verschickt nur Bilddaten (incl. Spielstatus)
+- Die Keyboard und Mouse-Daten eines Clients werden zum Server geschickt und dort verarbeitet (wie auch die des am Server lokalen Spielers auch).<br>
+- Server verschickt nur Bilddaten (incl. Spielstatus)<br>
 
 Changelog: Version 0.225
-- Server und Client-Architektur von WCF auf XSockets geändert
-- Ein oder mehrere Clients können nun gestartet werden. Diese verbinden sich automatisch zum Server.
-- Die Clients fungieren momentan noch als reine Spectators
+- Server und Client-Architektur von WCF auf XSockets geändert<br>
+- Ein oder mehrere Clients können nun gestartet werden. Diese verbinden sich automatisch zum Server.<br>
+- Die Clients fungieren momentan noch als reine Spectators<br>
 
 
 Spielstart: 
@@ -29,23 +29,23 @@ Spielstart:
 
 Steuerung:
 ----------
-Bewegung und Drehung mit Tastatur (W,A,S,D)
-W - vorwärts laufen / fahren
-S - rückwärts laufen / fahren
-A - nach links drehen / wenden
-D - nach rechts drehen / wenden
+Bewegung und Drehung mit Tastatur (W,A,S,D)<br>
+W - vorwärts laufen / fahren<br>
+S - rückwärts laufen / fahren<br>
+A - nach links drehen / wenden<br>
+D - nach rechts drehen / wenden<br>
 
 Drehung des Soldaten / Drehung des Panzerturms mit der Maus. Diese drehen sich in die Richtung des Mauszeigers.
 
-Linke Maustaste - Primäre Waffe
-Rechte Maustaste - Sekundäre Waffe
+Linke Maustaste - Primäre Waffe<br>
+Rechte Maustaste - Sekundäre Waffe<br>
 
 E - Ein- bzw. aussteigen in einen Panzer oder Bunker
 
 Sonstiges:
 ----------
 STRG+D - Sofortiger Tod<br>
-R - Restart (funktioniert nur am Server)
-ESC - Spiel beenden
-Mausrad drücken - Teleportation an diese Stelle (für Testzwecke)
+R - Restart (funktioniert nur am Server)<br>
+ESC - Spiel beenden<br>
+Mausrad drücken - Teleportation an diese Stelle (für Testzwecke)<br>
 
