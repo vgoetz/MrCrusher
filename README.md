@@ -1,8 +1,10 @@
 MrCrusher
 =========
 
-yet another cool 2D tank game
+yet another cool 2D tank game ;)
 
+![Dauerfeuer](https://github.com/vgoetz/MrCrusher/blob/master/MrCrusher/Screenshots/GibImSaures.png "Dauerfeuer")<br>
+![Don´t starve!](https://github.com/vgoetz/MrCrusher/blob/master/MrCrusher/Screenshots/Version_0.252.png "Don´t starve!")
 
 Changelog: Version 0.251
 - Bugfixing: AI Zielauswahl und Bewegung, Collisiondetection, Game Reset, ...<br>
