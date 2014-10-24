@@ -245,7 +245,8 @@ namespace MrCrusher.Framework.BaseObjects
         public IEnumerable<ImageTransferObject> ToImageTransferObjects() {
             IEnumerable<Sprite> sprites = GetCurrentSprites();
 
-            return sprites.Select(sprite => new ImageTransferObject(Guid, PlayerAsController, sprite.Infos, Health, MaxHealth, Dead, IsControlledByHumanPlayer));
+            return sprites.Select(sprite => new ImageTransferObject(Guid, PlayerAsController, sprite.Infos, Health, MaxHealth, Dead,
+                IsControlledByHumanPlayer, PlayerAsController != null ? PlayerAsController.PlayersColor : (Color?) null, (short)(this is ISoldier ? 15 : 25)));
         }
     }
 }

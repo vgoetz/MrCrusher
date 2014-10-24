@@ -21,7 +21,7 @@ namespace MrCrusher {
         static Surface _background;
         static Surface _topMenu;
 
-        public static void LoadBackgroundAndMenus() {
+        public static void Init() {
             _background = ImageHelper.LoadImage(GameEnv.ImageResourcesSubDir + "Background_Sand_800x600.png", false);
             _topMenu = ImageHelper.LoadImage(GameEnv.ImageResourcesSubDir + "TopMenu.png", false);
         }
@@ -54,7 +54,7 @@ namespace MrCrusher {
 
                 foreach (IImageTransferObject ito in GameEnv.ImageTransferObjects.Where(ito => ito != null)) {
 
-                    Surface surfaceToDraw = null;
+                    Surface surfaceToDraw;
 
                     switch (ito.Infos.SpriteType) {
                         case SpriteType.Image:
@@ -78,6 +78,23 @@ namespace MrCrusher {
                             surfaceToDraw = ImageHelper.CreateRotatedSurface(surfaceToDraw, (int)ito.Infos.Orientation);
                         }
                         GameEnv.StdVideoScreen.Blit(surfaceToDraw, new Point(ito.Infos.SurfacePositionTopLeftX, ito.Infos.SurfacePositionTopLeftY));
+
+                        if (ito.Dead) {
+                            continue;
+                        }
+
+                        if (ito.IsControlledByHumanPlayer) {
+                            if (!String.IsNullOrWhiteSpace(ito.IdCircleColorAsString)) {
+                                
+                                var colorConverter = new ColorConverter();
+                                object convertFromInvariantString = colorConverter.ConvertFromInvariantString(ito.IdCircleColorAsString);
+                                if (convertFromInvariantString != null) {
+                                    var positionCenter = new Point(ito.Infos.SurfacePositionCenterX, ito.Infos.SurfacePositionCenterY);
+                                    DrawIdentifierCircle(positionCenter, ito.IdCircleRadius, (Color) convertFromInvariantString);
+                                }
+                            }
+                        }
+
                     } else {
                         throw new ApplicationException(string.Format("No Surface to draw! Image name: {0}", ito.Infos.Name));
                     }
@@ -90,10 +107,10 @@ namespace MrCrusher {
             // Blit all objects
 
             // Level 1 - Alle am Boden liegenden Objekte
-            var level1Objects = GameEnv.GameObjectsToDrawAndMove.Where(gameObject => gameObject.Dead && gameObject.ShouldBeDeleted == false && gameObject.Visible).ToList();
+            List<IGameObject> level1Objects = GameEnv.GameObjectsToDrawAndMove.Where(gameObject => gameObject.Dead && gameObject.ShouldBeDeleted == false && gameObject.Visible).ToList();
 
             // Level 2 - Alle sich am Boden bewegenden Objekte
-            var level2Objects = GameEnv.GameObjectsToDrawAndMove.Where(gameObject => gameObject.ShouldBeDeleted == false && gameObject.Visible && level1Objects.Contains(gameObject) == false).ToList();
+            List<IGameObject> level2Objects = GameEnv.GameObjectsToDrawAndMove.Where(gameObject => gameObject.ShouldBeDeleted == false && gameObject.Visible && level1Objects.Contains(gameObject) == false).ToList();
 
             // Level 3 - Nahe am Boden fliegende Objekte TODO
             // Level 4 - Weit oben fliegende Objekte TODO
@@ -121,11 +138,14 @@ namespace MrCrusher {
                     var bunker = gameObject as Bunker;
                     var soldier = gameObject as Soldier;
                     var movingObj = gameObject as MovingObject;
-                    int viewRange = 0;
-                    double orientation = 0;
 
-                    viewRange = (tank != null) ? tank.ViewRange : (soldier != null) ? soldier.ViewRange : (bunker != null) ? bunker.ViewRange : 0;
-                    orientation = (tank != null) ? tank.TowerOrientationInDegrees : (soldier != null) ? soldier.OrientationInDegrees : (bunker != null) ? bunker.TowerOrientationInDegrees : 0;
+                    int viewRange = (tank != null) ? tank.ViewRange : (soldier != null) ? soldier.ViewRange : (bunker != null) ? bunker.ViewRange : 0;
+                    double orientation = (tank != null) ? tank.TowerOrientationInDegrees : (soldier != null) ? soldier.OrientationInDegrees : (bunker != null) ? bunker.TowerOrientationInDegrees : 0;
+
+                    // Draw human players identifier circle 
+                    if (gameObject.IsControlledByHumanPlayer) {
+                        DrawIdentifierCircle(gameObject.PositionCenter, (short)(soldier != null ? 15 : 25), gameObject.PlayerAsController.PlayersColor);
+                    }
 
                     // Draw line of view
                     if (viewRange > 0) {
@@ -144,6 +164,15 @@ namespace MrCrusher {
                     //GameEnv.StdVideoScreen.Draw(new Box(r.Location, r.Size), Color.Red);
                 }
             }
+        }
+
+        private static void DrawIdentifierCircle(Point positionCenter, short radius, Color color) {
+            var idCircle = new Circle(positionCenter, radius);
+            GameEnv.StdVideoScreen.Draw(idCircle, color);
+            idCircle = new Circle(positionCenter, ++radius);
+            GameEnv.StdVideoScreen.Draw(idCircle, color);
+            idCircle = new Circle(positionCenter, ++radius);
+            GameEnv.StdVideoScreen.Draw(idCircle, color);
         }
 
         private static void DrawMenuAndStatistics() {

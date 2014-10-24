@@ -166,7 +166,9 @@ namespace MrCrusher.Framework.BaseObjects {
                                                 Name = ImageName,
                                                 SpriteType = SpriteType.Image,
                                                 SurfacePositionTopLeftX = SurfacePositionTopLeft.X,
-                                                SurfacePositionTopLeftY = SurfacePositionTopLeft.Y
+                                                SurfacePositionTopLeftY = SurfacePositionTopLeft.Y,
+                                                SurfacePositionCenterX = PositionCenter.X,
+                                                SurfacePositionCenterY = PositionCenter.Y
                                             });
             list.Add(platformSurfaceAndInfo);
 
@@ -178,6 +180,8 @@ namespace MrCrusher.Framework.BaseObjects {
                 towerSurfaceAndInfo.Surface = _towerRotatedSurface;
                 towerSurfaceAndInfo.Infos.SurfacePositionTopLeftX = SurfacePositionTopLeft.X;
                 towerSurfaceAndInfo.Infos.SurfacePositionTopLeftY = SurfacePositionTopLeft.Y;
+                towerSurfaceAndInfo.Infos.SurfacePositionCenterX = PositionCenter.X;
+                towerSurfaceAndInfo.Infos.SurfacePositionCenterY = PositionCenter.Y;
                 TowerImageName = towerSurfaceAndInfo.Infos.Name;
 
                 list.Add(towerSurfaceAndInfo);

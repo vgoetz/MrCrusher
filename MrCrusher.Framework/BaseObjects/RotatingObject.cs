@@ -116,6 +116,8 @@ namespace MrCrusher.Framework.BaseObjects {
                 sprite.Infos.Orientation = OrientationInDegrees;
                 sprite.Infos.SurfacePositionTopLeftX = SurfacePositionTopLeft.X;
                 sprite.Infos.SurfacePositionTopLeftY = SurfacePositionTopLeft.Y;
+                sprite.Infos.SurfacePositionCenterX = PositionCenter.X;
+                sprite.Infos.SurfacePositionCenterY = PositionCenter.Y;
             }
 
             return sprites;

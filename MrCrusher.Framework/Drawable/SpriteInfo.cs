@@ -25,7 +25,9 @@ namespace MrCrusher.Framework.Drawable {
         public SpriteType SpriteType { get; set; }
         public int SpriteIndex { get; set; }
         public int SurfacePositionTopLeftX { get; set; }
-        public int SurfacePositionTopLeftY { get; set; }
+        public int SurfacePositionTopLeftY { get; set; }        
+        public int SurfacePositionCenterX { get; set; }
+        public int SurfacePositionCenterY { get; set; }
         public Degree Orientation { get; set; }
         public bool AlphaBlending { get; set; }
         public byte Alpha { get; set; }

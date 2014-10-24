@@ -17,7 +17,8 @@ namespace MrCrusher.Framework.Game.Environment {
         public static string SoundResourcesSubDir = @".\Resources\Sounds\";
         public static string VideoResourcesSubDir = @".\Resources\Videos\";
 
-        
+        public static ColorConverter ColorConverter = new ColorConverter();
+
         public static int Fps = 30;
 
         public static int ScreenWidth = 800;

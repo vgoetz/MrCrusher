@@ -46,7 +46,7 @@ namespace MrCrusher {
                     _localInputEventHandler.BindApplicationEvents(BIG_LOOP);
                     _localInputEventHandler.BindKeyboardAndMouseEvents();
 
-                    DrawHandler.LoadBackgroundAndMenus();
+                    DrawHandler.Init();
                     MusicHelper.LoadMusic(GameEnv.SoundResourcesSubDir + "PanzerRollt_10001.ogg");
                     SoundHandler.LoadSounds();
                     break;

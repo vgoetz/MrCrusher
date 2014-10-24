@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using MrCrusher.Framework.BaseObjects.Interfaces;
 using MrCrusher.Framework.BaseObjectsFactories;
@@ -14,6 +15,8 @@ namespace MrCrusher.Framework.Player {
         private KeyboardInteraction _lastPlayersKeybardInteraction;
         private readonly bool _isLocalPlayer;
         private readonly bool _isHost;
+        private readonly Color _playersColor;
+        private static readonly List<Color> PlayersPossibleColors = new List<Color>() { Color.Aqua, Color.DarkMagenta, Color.Blue, Color.Yellow, Color.Green};
         
         private readonly PlayersSoldierFactory _playersSoldierFactory;
         
@@ -28,6 +31,10 @@ namespace MrCrusher.Framework.Player {
 
             if (isHost) {
                 _clientGuid = new Guid();
+                _playersColor = Color.FromArgb(200, Color.Red);
+            } else {
+                var random = new Random(DateTime.UtcNow.Millisecond);
+                _playersColor = Color.FromArgb(200, PlayersPossibleColors[random.Next(PlayersPossibleColors.Count - 1)]);
             }
 
             _playersSoldierFactory = new PlayersSoldierFactory();
@@ -41,6 +48,10 @@ namespace MrCrusher.Framework.Player {
 
         public string Name {
             get { return _name; }
+        }
+
+        public Color PlayersColor {
+            get { return _playersColor; }
         }
 
         public MouseInteraction LastPlayersMouseInteraction {
@@ -102,7 +113,6 @@ namespace MrCrusher.Framework.Player {
         }
 
         public PlayerBodyCount BodyCount { get; private set; }
-
 
         public void Reset() {
 

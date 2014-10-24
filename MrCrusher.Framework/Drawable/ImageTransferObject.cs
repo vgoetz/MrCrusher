@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+using MrCrusher.Framework.Game.Environment;
 
 namespace MrCrusher.Framework.Drawable {
 
@@ -11,8 +13,11 @@ namespace MrCrusher.Framework.Drawable {
         private int _maxHealth;
         private bool _dead;
         private bool _isControlledByHumanPlayer;
+        private short _idCircleRadius;
+        private string _idCircleColorAsString;
 
-        public ImageTransferObject(Guid gameObjectGuid, Player.Player player, SpriteInfo infos, int health, int maxHealth, bool dead, bool isControlledByHumanPlayer) {
+        public ImageTransferObject(Guid gameObjectGuid, Player.Player player, SpriteInfo infos, int health, int maxHealth, bool dead, bool isControlledByHumanPlayer, Color? idCircleColor, short idCircleRadius) {
+            
             if (player != null && player.ClientGuid != Guid.Empty) {
 
                 ClientGuid = player.ClientGuid;
@@ -23,6 +28,10 @@ namespace MrCrusher.Framework.Drawable {
             MaxHealth = maxHealth;
             Dead = dead;
             IsControlledByHumanPlayer = isControlledByHumanPlayer;
+            IdCircleRadius = idCircleRadius;
+            if (idCircleColor != null) {
+                IdCircleColorAsString = GameEnv.ColorConverter.ConvertToInvariantString(idCircleColor);
+            }
         }
 
         public Guid GameObjectGuid {
@@ -58,6 +67,16 @@ namespace MrCrusher.Framework.Drawable {
         public bool IsControlledByHumanPlayer {
             get { return _isControlledByHumanPlayer; }
             private set { _isControlledByHumanPlayer = value; }
+        }
+
+        public string IdCircleColorAsString {
+            get { return _idCircleColorAsString; }
+            private set { _idCircleColorAsString = value; }
+        }
+
+        public short IdCircleRadius {
+            get { return _idCircleRadius; }
+            private set { _idCircleRadius = value; }
         }
     }
 }

@@ -12,5 +12,7 @@ namespace MrCrusher.Framework.Drawable {
         int MaxHealth { get; }
         bool Dead { get; }
         bool IsControlledByHumanPlayer { get; }
+        string IdCircleColorAsString { get; }
+        short IdCircleRadius { get; }
     }
 }
