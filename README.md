@@ -1,4 +1,4 @@
-MrCrusher
+Mr. Crusher
 =========
 
 yet another cool 2D tank game ;-)
