@@ -3,10 +3,14 @@ MrCrusher
 
 yet another cool 2D tank game ;-)
 
+Changelog: Version 0.269
+- Usernamen werden nun auch im Spielfeld eingeblendet<br>
+![UsernamesInGame](https://github.com/vgoetz/MrCrusher/blob/master/MrCrusher/Screenshots/UsernamenInGameEinblenden.png "Who is who ... Teil 2")<br>
+
 Changelog: Version 0.268
 - Farbliche Markierung der eigenen Einheit und die der anderen Mitspieler
 - Username steht nun oben (in eigener Farbe)
-![FarblicheMarkierung](https://github.com/vgoetz/MrCrusher/blob/master/MrCrusher/Screenshots/FarblicheMarkierungUndUsernamenEinblenden.png "Who is who ...")<br>
+![FarblicheMarkierung](https://github.com/vgoetz/MrCrusher/blob/master/MrCrusher/Screenshots/FarblicheMarkierungUndUsernamenEinblenden.png "Who is who ... Teil 1")<br>
 
 Changelog: Version 0.252
 - Bugfixing: AI Zielauswahl und Bewegung, Collisiondetection, Game Reset, ...<br>
