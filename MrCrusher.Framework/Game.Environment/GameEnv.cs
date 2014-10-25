@@ -13,6 +13,8 @@ namespace MrCrusher.Framework.Game.Environment {
 
     public static class GameEnv {
 
+        public static Random Random = new Random(DateTime.UtcNow.Millisecond);
+
         public static string FontResourcesSubDir  = @".\Resources\Fonts\";
         public static string ImageResourcesSubDir = @".\Resources\Images\";
         public static string SoundResourcesSubDir = @".\Resources\Sounds\";

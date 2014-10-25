@@ -25,7 +25,7 @@ namespace MrCrusher.XSocketsClient {
             }
 
             string serverIpAdress = args.Length > 0 ? args[0] : "127.0.0.1";
-            string playersName    = args.Length > 1 ? args[1] : "ClientPlayer";
+            string playersName    = args.Length > 1 ? args[1] : String.Format("ClientPlayer_{0}", GameEnv.Random.Next(0, 99999));
 
             var localPlayer = new Player(playersName, true, false);
             GameEnv.Players = new List<Player>();
