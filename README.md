@@ -1,12 +1,14 @@
 MrCrusher
 =========
 
-yet another cool 2D tank game ;)
+yet another cool 2D tank game ;-)
 
-![Dauerfeuer](https://github.com/vgoetz/MrCrusher/blob/master/MrCrusher/Screenshots/GibImSaures.png "Dauerfeuer")<br>
-![Don´t starve!](https://github.com/vgoetz/MrCrusher/blob/master/MrCrusher/Screenshots/Version_0.252.png "Don´t starve!")
+Changelog: Version 0.268
+- Farbliche Markierung der eigenen Einheit und die der anderen Mitspieler
+- Username steht nun oben (in eigener Farbe)
+![FarblicheMarkierung](https://github.com/vgoetz/MrCrusher/blob/master/MrCrusher/Screenshots/FarblicheMarkierungUndUsernamenEinblenden.png "Who is who ...")<br>
 
-Changelog: Version 0.251
+Changelog: Version 0.252
 - Bugfixing: AI Zielauswahl und Bewegung, Collisiondetection, Game Reset, ...<br>
 - Granaten für Soldaten hinzugefügt<br>
 - Start-Parameter hinzugefügt<br>
