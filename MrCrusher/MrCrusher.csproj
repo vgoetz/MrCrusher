@@ -184,12 +184,14 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Screenshots\20110803_NeuePanzerGemalt.png" />
+    <Content Include="Screenshots\FarblicheMarkierungUndUsernamenEinblenden.png" />
     <Content Include="Screenshots\GibImSaures.png" />
     <Content Include="Screenshots\MenüObenUndFragCounterHinzugefügt.png" />
     <Content Include="Screenshots\NeueSoldatenUndDieKönnenAuchSterben.png" />
     <Content Include="Screenshots\Panzer.ico" />
     <Content Include="Screenshots\Panzer.PNG" />
     <Content Include="Screenshots\PanzerGitHub.png" />
+    <Content Include="Screenshots\Version_0.252.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fonts\ARIAL.TTF">
