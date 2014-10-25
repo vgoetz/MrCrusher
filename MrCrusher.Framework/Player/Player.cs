@@ -33,10 +33,10 @@ namespace MrCrusher.Framework.Player {
 
             if (isHost) {
                 _clientGuid = new Guid();
-                _playersColor = Color.FromArgb(200, Color.Red);
+                _playersColor = Color.FromArgb(80, Color.Red);
             } else if (GameEnv.RunningAspect == PublicFrameworkEnums.RunningAspect.Server) {
                 // Set client-player´s user color (actually it´s set by the server, not choosen by client)
-                _playersColor = Color.FromArgb(200, PlayersPossibleColors[GameEnv.Random.Next(PlayersPossibleColors.Count - 1)]);
+                _playersColor = Color.FromArgb(80, PlayersPossibleColors[GameEnv.Random.Next(PlayersPossibleColors.Count - 1)]);
             }
 
             _playersSoldierFactory = new PlayersSoldierFactory();
