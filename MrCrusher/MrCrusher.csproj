@@ -191,6 +191,7 @@
     <Content Include="Screenshots\Panzer.ico" />
     <Content Include="Screenshots\Panzer.PNG" />
     <Content Include="Screenshots\PanzerGitHub.png" />
+    <Content Include="Screenshots\UsernamenInGameEinblenden.png" />
     <Content Include="Screenshots\Version_0.252.png" />
   </ItemGroup>
   <ItemGroup>
