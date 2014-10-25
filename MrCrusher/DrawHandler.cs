@@ -13,7 +13,6 @@ using MrCrusher.Framework.SDL;
 using SdlDotNet.Graphics;
 using SdlDotNet.Graphics.Primitives;
 using SdlDotNet.Input;
-using Font = SdlDotNet.Graphics.Font;
 
 namespace MrCrusher {
 
@@ -233,17 +232,16 @@ namespace MrCrusher {
             GameEnv.StdVideoScreen.Blit(timeLeftSurface, new Point(GameEnv.ScreenWidth - timeLeftSurface.Width - 10, 10));
 
             // - Status - Game over
-            var fontStatsGameOver1 = new Font(GameEnv.FontResourcesSubDir + "Arial.ttf", 42) { Bold = true };
-            var fontStatsGameOver2 = new Font(GameEnv.FontResourcesSubDir + "Arial.ttf", 14) { Bold = true };
+            
             bool isGameOver = GameEnv.EndTime != null;
 
             if (isGameOver) {
                 Color fontBgColorGameOver = Color.Black;
                 Color fontFgColorGameOver = Color.OrangeRed;
-                var gameOverSurface1Bg = fontStatsGameOver1.Render("Game over", fontBgColorGameOver, true);
-                var gameOverSurface1Fg = fontStatsGameOver1.Render("Game over", fontFgColorGameOver, true);
-                var gameOverSurface2Bg = fontStatsGameOver2.Render("Press 'R' to restart", fontBgColorGameOver, true);
-                var gameOverSurface2Fg = fontStatsGameOver2.Render("Press 'R' to restart", fontFgColorGameOver, true);
+                var gameOverSurface1Bg = GameEnv.GameOver1Font.Render("Game over", fontBgColorGameOver, true);
+                var gameOverSurface1Fg = GameEnv.GameOver1Font.Render("Game over", fontFgColorGameOver, true);
+                var gameOverSurface2Bg = GameEnv.GameOver2Font.Render("Press 'R' to restart", fontBgColorGameOver, true);
+                var gameOverSurface2Fg = GameEnv.GameOver2Font.Render("Press 'R' to restart", fontFgColorGameOver, true);
                 GameEnv.StdVideoScreen.Blit(gameOverSurface1Bg, new Point(GameEnv.ScreenWidth / 2 - gameOverSurface1Bg.Width / 2 - 4, GameEnv.ScreenHeight / 2 - gameOverSurface1Bg.Height / 2 - 4));
                 GameEnv.StdVideoScreen.Blit(gameOverSurface1Fg, new Point(GameEnv.ScreenWidth / 2 - gameOverSurface1Fg.Width / 2, GameEnv.ScreenHeight / 2 - gameOverSurface1Fg.Height / 2));
                 GameEnv.StdVideoScreen.Blit(gameOverSurface2Bg, new Point(GameEnv.ScreenWidth / 2 - gameOverSurface2Bg.Width / 2 - 1, GameEnv.ScreenHeight / 2 - gameOverSurface2Bg.Height / 2 + gameOverSurface1Fg.Height - 1));

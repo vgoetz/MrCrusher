@@ -28,8 +28,7 @@ namespace MrCrusher.XSocketsClient {
             string playersName    = args.Length > 1 ? args[1] : String.Format("ClientPlayer_{0}", GameEnv.Random.Next(0, 99999));
 
             var localPlayer = new Player(playersName, true, false);
-            GameEnv.Players = new List<Player>();
-            GameEnv.Players.Add(localPlayer);
+            GameEnv.Players = new List<Player> {localPlayer};
 
             GameEnv.RunningAspect = PublicFrameworkEnums.RunningAspect.Client;
             _mainProgram = new MainProgram();
@@ -61,6 +60,8 @@ namespace MrCrusher.XSocketsClient {
             try {
                 _client.UnBind("GameConnection");
                 _client.Close();
+            
+            // ReSharper disable once EmptyGeneralCatchClause --- Das ist so gewollt
             } catch {}
         }
 
@@ -68,13 +69,15 @@ namespace MrCrusher.XSocketsClient {
 
             if (keyboardInteraction.KeyPressedList.Any() || mouseInteraction.CursorMoved || !mouseInteraction.NoneButtonPressed) {
 
-                var keyAndMouseTo = new KeyboardAndMouseInteractionTO {KeyPressedList = keyboardInteraction.KeyPressedList};
-                keyAndMouseTo.CursorMoved = mouseInteraction.CursorMoved;
-                keyAndMouseTo.CursorPositionX = mouseInteraction.CursorPositionX;
-                keyAndMouseTo.CursorPositionY = mouseInteraction.CursorPositionY;
-                keyAndMouseTo.PrimaryButtonPressed = mouseInteraction.PrimaryButtonPressed;
-                keyAndMouseTo.SecondaryButtonPressed = mouseInteraction.SecondaryButtonPressed;
-                keyAndMouseTo.MiddleButtonPressed = mouseInteraction.MiddleButtonPressed;
+                var keyAndMouseTo = new KeyboardAndMouseInteractionTO {
+                    KeyPressedList         = keyboardInteraction.KeyPressedList, 
+                    CursorMoved            = mouseInteraction.CursorMoved,
+                    CursorPositionX        = mouseInteraction.CursorPositionX, 
+                    CursorPositionY        = mouseInteraction.CursorPositionY,
+                    PrimaryButtonPressed   = mouseInteraction.PrimaryButtonPressed,
+                    SecondaryButtonPressed = mouseInteraction.SecondaryButtonPressed,
+                    MiddleButtonPressed    = mouseInteraction.MiddleButtonPressed
+                };
 
                 _client.Send(keyAndMouseTo, "GameConnection");
             }

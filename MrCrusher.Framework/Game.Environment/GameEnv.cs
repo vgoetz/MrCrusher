@@ -24,6 +24,10 @@ namespace MrCrusher.Framework.Game.Environment {
 
         public static Font BodyCountFont = new Font(FontResourcesSubDir + "Autumn__.ttf", 15);
         public static Font TimeElapsedFont = new Font(FontResourcesSubDir + "Arial.ttf", 18);
+        public static Font UsernameInGameFont = new Font(FontResourcesSubDir + "Arial.ttf", 10);
+        public static Font UsernameInMenuFont = new Font(FontResourcesSubDir + "Arial.ttf", 15);
+        public static Font GameOver1Font = new Font(FontResourcesSubDir + "Arial.ttf", 42) { Bold = true };
+        public static Font GameOver2Font = new Font(FontResourcesSubDir + "Arial.ttf", 14) { Bold = true };
 
         public static int Fps = 30;
 
