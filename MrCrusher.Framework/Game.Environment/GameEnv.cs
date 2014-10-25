@@ -7,6 +7,7 @@ using MrCrusher.Framework.Core;
 using MrCrusher.Framework.Drawable;
 using MrCrusher.Framework.Player;
 using SdlDotNet.Graphics;
+using Font = SdlDotNet.Graphics.Font;
 
 namespace MrCrusher.Framework.Game.Environment {
 
@@ -18,6 +19,9 @@ namespace MrCrusher.Framework.Game.Environment {
         public static string VideoResourcesSubDir = @".\Resources\Videos\";
 
         public static ColorConverter ColorConverter = new ColorConverter();
+
+        public static Font BodyCountFont = new Font(FontResourcesSubDir + "Autumn__.ttf", 15);
+        public static Font TimeElapsedFont = new Font(FontResourcesSubDir + "Arial.ttf", 18);
 
         public static int Fps = 30;
 

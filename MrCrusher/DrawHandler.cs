@@ -13,6 +13,7 @@ using MrCrusher.Framework.SDL;
 using SdlDotNet.Graphics;
 using SdlDotNet.Graphics.Primitives;
 using SdlDotNet.Input;
+using Font = SdlDotNet.Graphics.Font;
 
 namespace MrCrusher {
 
@@ -205,8 +206,7 @@ namespace MrCrusher {
 
             // - Body count
             if (GameEnv.LocalPlayer != null) {
-                var font = new SdlDotNet.Graphics.Font(GameEnv.FontResourcesSubDir + "Autumn__.ttf", 15);
-                Surface fontTopMenuSurface = font.Render(GameEnv.LocalPlayer.BodyCount.KillsTotal.ToString(CultureInfo.InvariantCulture), Color.Gray, true);
+                Surface fontTopMenuSurface = GameEnv.BodyCountFont.Render(GameEnv.LocalPlayer.BodyCount.KillsTotal.ToString(CultureInfo.InvariantCulture), Color.Gray, true);
                 GameEnv.StdVideoScreen.Blit(fontTopMenuSurface, new Point(65, 25));
             }
 
@@ -223,18 +223,18 @@ namespace MrCrusher {
             //}
 
             // - Status - Time elapsed
-            var fontStatsTimeElapsed = new SdlDotNet.Graphics.Font(GameEnv.FontResourcesSubDir + "Arial.ttf", 18);
+            
             TimeSpan timeElapsed = (GameEnv.EndTime != null ? GameEnv.EndTime.Value : DateTime.Now) - GameEnv.StartTime;
             Color fontColorTimeElapsed = GameEnv.EndTime != null ? Color.OrangeRed : Color.White;
             double hours = timeElapsed.Hours;
             double minutes = timeElapsed.Minutes;
             double seconds = timeElapsed.Seconds;
-            var timeLeftSurface = fontStatsTimeElapsed.Render(string.Format("{0}{1:00}:{2:00}", hours > 0 ? hours + ":" : "", minutes, seconds), fontColorTimeElapsed, true);
+            var timeLeftSurface = GameEnv.TimeElapsedFont.Render(string.Format("{0}{1:00}:{2:00}", hours > 0 ? hours + ":" : "", minutes, seconds), fontColorTimeElapsed, true);
             GameEnv.StdVideoScreen.Blit(timeLeftSurface, new Point(GameEnv.ScreenWidth - timeLeftSurface.Width - 10, 10));
 
             // - Status - Game over
-            var fontStatsGameOver1 = new SdlDotNet.Graphics.Font(GameEnv.FontResourcesSubDir + "Arial.ttf", 42) { Bold = true };
-            var fontStatsGameOver2 = new SdlDotNet.Graphics.Font(GameEnv.FontResourcesSubDir + "Arial.ttf", 14) { Bold = true };
+            var fontStatsGameOver1 = new Font(GameEnv.FontResourcesSubDir + "Arial.ttf", 42) { Bold = true };
+            var fontStatsGameOver2 = new Font(GameEnv.FontResourcesSubDir + "Arial.ttf", 14) { Bold = true };
             bool isGameOver = GameEnv.EndTime != null;
 
             if (isGameOver) {
