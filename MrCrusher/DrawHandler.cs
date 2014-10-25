@@ -189,15 +189,11 @@ namespace MrCrusher {
                                         GameEnv.LocalPlayer.CurrentControlledGameObject.MaxHealth;
 
                 } else if (GameEnv.LocalPlayer.CurrentControlledTransferObject != null) {
-
-
                     if (GameEnv.LocalPlayer.CurrentControlledTransferObject.MaxHealth != 0) {
-
                         currentHealthWith = GameEnv.LocalPlayer.CurrentControlledTransferObject.Health * maxHealthWith /
                                             GameEnv.LocalPlayer.CurrentControlledTransferObject.MaxHealth;
                     }
                 }
-
             }
             var topMenuHealthPointsRectangle = new Rectangle(65, 13, currentHealthWith, 6);
             GameEnv.StdVideoScreen.Blit(_topMenu);
@@ -209,6 +205,12 @@ namespace MrCrusher {
                 GameEnv.StdVideoScreen.Blit(fontTopMenuSurface, new Point(65, 25));
             }
 
+            // - Username
+            if (GameEnv.LocalPlayer != null) {
+                Surface fontTopMenuSurface = GameEnv.UsernameInMenuFont.Render(GameEnv.LocalPlayer.Name, GameEnv.LocalPlayer.PlayersColor, true);
+                GameEnv.StdVideoScreen.Blit(fontTopMenuSurface, new Point(250, 10));
+            }
+
 
             // - Stats - Orientation
             //var fontStatsOrientation = new SdlDotNet.Graphics.Font(GameEnv.FontResourcesSubDir + "Arial.ttf", 12);
@@ -218,7 +220,7 @@ namespace MrCrusher {
 
             //if (orientation != null) {
             //    fontTopMenuSurface = fontStats.Render("Degree: " + orientation, Color.White, true);
-            //    GameEnv.StdVideoScreen.Blit(fontTopMenuSurface, new Point(250, 10));
+            //    GameEnv.StdVideoScreen.Blit(fontTopMenuSurface, new Point(350, 10));
             //}
 
             // - Status - Time elapsed

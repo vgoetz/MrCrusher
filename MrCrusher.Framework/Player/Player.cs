@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Drawing;
 using MrCrusher.Framework.BaseObjects.Interfaces;
 using MrCrusher.Framework.BaseObjectsFactories;
+using MrCrusher.Framework.Core;
 using MrCrusher.Framework.Drawable;
+using MrCrusher.Framework.Game.Environment;
 using MrCrusher.Framework.Input;
 
 namespace MrCrusher.Framework.Player {
@@ -15,7 +17,7 @@ namespace MrCrusher.Framework.Player {
         private KeyboardInteraction _lastPlayersKeybardInteraction;
         private readonly bool _isLocalPlayer;
         private readonly bool _isHost;
-        private readonly Color _playersColor;
+        private Color _playersColor;
         private static readonly List<Color> PlayersPossibleColors = new List<Color>() { Color.Aqua, Color.DarkMagenta, Color.Blue, Color.Yellow, Color.Green};
         
         private readonly PlayersSoldierFactory _playersSoldierFactory;
@@ -32,9 +34,9 @@ namespace MrCrusher.Framework.Player {
             if (isHost) {
                 _clientGuid = new Guid();
                 _playersColor = Color.FromArgb(200, Color.Red);
-            } else {
-                var random = new Random(DateTime.UtcNow.Millisecond);
-                _playersColor = Color.FromArgb(200, PlayersPossibleColors[random.Next(PlayersPossibleColors.Count - 1)]);
+            } else if (GameEnv.RunningAspect == PublicFrameworkEnums.RunningAspect.Server) {
+                // Set client-player´s user color (actually it´s set by the server, not choosen by client)
+                _playersColor = Color.FromArgb(200, PlayersPossibleColors[GameEnv.Random.Next(PlayersPossibleColors.Count - 1)]);
             }
 
             _playersSoldierFactory = new PlayersSoldierFactory();
@@ -43,7 +45,7 @@ namespace MrCrusher.Framework.Player {
         }
 
         public PlayerTo ToPlayerTo() {
-            return new PlayerTo(Name, ClientGuid);
+            return new PlayerTo(Name, ClientGuid, GameEnv.ColorConverter.ConvertToInvariantString(PlayersColor));
         }
 
         public string Name {
@@ -52,6 +54,7 @@ namespace MrCrusher.Framework.Player {
 
         public Color PlayersColor {
             get { return _playersColor; }
+            set { _playersColor = value; }
         }
 
         public MouseInteraction LastPlayersMouseInteraction {

@@ -8,6 +8,7 @@ using MrCrusher.Framework.Input;
 using MrCrusher.Framework.Player;
 using XSockets.Client40;
 using XSockets.Core.XSocket.Helpers;
+using System.Drawing;
 
 namespace MrCrusher.XSocketsClient {
     
@@ -107,6 +108,15 @@ namespace MrCrusher.XSocketsClient {
                 if (receivedData.ImageTransferObjects == null || !receivedData.ImageTransferObjects.Any() || receivedData.ImageTransferObjects.All(ito => ito == null)) {
                     throw new ApplicationException("Daten vom Server empfangen aber keine Image-Daten vorhanden.");
                     // Hint: Never use nested Interface-Types in sended type! Always use class instead!
+                }
+
+                // Set client-player´s user color (actually it´s set by the server, not choosen by client)
+                var localPlayerTo = receivedData.PlayerTos.FirstOrDefault(p => p.ClientGuid == GameEnv.LocalPlayer.ClientGuid);
+                if (localPlayerTo != null) {
+                    object convertedColor = GameEnv.ColorConverter.ConvertFromInvariantString(localPlayerTo.ColorAsString);
+                    if (convertedColor != null) {
+                        GameEnv.LocalPlayer.PlayersColor = (Color) convertedColor;
+                    }
                 }
 
                 GameEnv.RegisterImageTransferObjectForAdding(receivedData.ImageTransferObjects.ToList());
