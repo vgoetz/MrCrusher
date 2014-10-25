@@ -14,5 +14,6 @@ namespace MrCrusher.Framework.Drawable {
         bool IsControlledByHumanPlayer { get; }
         string IdCircleColorAsString { get; }
         short IdCircleRadius { get; }
+        string Displayname { get; }
     }
 }

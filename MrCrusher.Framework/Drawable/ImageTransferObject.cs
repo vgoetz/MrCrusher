@@ -15,13 +15,19 @@ namespace MrCrusher.Framework.Drawable {
         private bool _isControlledByHumanPlayer;
         private short _idCircleRadius;
         private string _idCircleColorAsString;
+        private string _displayname;
 
         public ImageTransferObject(Guid gameObjectGuid, Player.Player player, SpriteInfo infos, int health, int maxHealth, bool dead, bool isControlledByHumanPlayer, Color? idCircleColor, short idCircleRadius) {
             
-            if (player != null && player.ClientGuid != Guid.Empty) {
+            if (player != null) {
 
-                ClientGuid = player.ClientGuid;
+                Displayname = player.Name ?? String.Empty;
+
+                if (player.ClientGuid != Guid.Empty) {
+                    ClientGuid = player.ClientGuid;
+                }
             }
+            
             GameObjectGuid = gameObjectGuid;
             Infos = infos;
             Health = health;
@@ -29,9 +35,7 @@ namespace MrCrusher.Framework.Drawable {
             Dead = dead;
             IsControlledByHumanPlayer = isControlledByHumanPlayer;
             IdCircleRadius = idCircleRadius;
-            if (idCircleColor != null) {
-                IdCircleColorAsString = GameEnv.ColorConverter.ConvertToInvariantString(idCircleColor);
-            }
+            IdCircleColorAsString = GameEnv.ColorConverter.ConvertToInvariantString(idCircleColor ?? Color.Black);
         }
 
         public Guid GameObjectGuid {
@@ -77,6 +81,11 @@ namespace MrCrusher.Framework.Drawable {
         public short IdCircleRadius {
             get { return _idCircleRadius; }
             private set { _idCircleRadius = value; }
+        }
+
+        public string Displayname {
+            get { return _displayname; }
+            private set { _displayname = value; }
         }
     }
 }

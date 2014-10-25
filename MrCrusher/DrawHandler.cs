@@ -86,11 +86,12 @@ namespace MrCrusher {
                         if (ito.IsControlledByHumanPlayer) {
                             if (!String.IsNullOrWhiteSpace(ito.IdCircleColorAsString)) {
                                 
-                                var colorConverter = new ColorConverter();
-                                object convertFromInvariantString = colorConverter.ConvertFromInvariantString(ito.IdCircleColorAsString);
-                                if (convertFromInvariantString != null) {
+                                object convertedColor = GameEnv.ColorConverter.ConvertFromInvariantString(ito.IdCircleColorAsString);
+                                if (convertedColor != null) {
+
                                     var positionCenter = new Point(ito.Infos.SurfacePositionCenterX, ito.Infos.SurfacePositionCenterY);
-                                    DrawIdentifierCircle(positionCenter, ito.IdCircleRadius, (Color) convertFromInvariantString);
+                                    DrawIdentifierCircle(positionCenter, ito.IdCircleRadius, (Color) convertedColor);
+                                    DrawUsername(ito.Displayname, positionCenter, (Color) convertedColor);
                                 }
                             }
                         }
@@ -145,6 +146,7 @@ namespace MrCrusher {
                     // Draw human players identifier circle 
                     if (gameObject.IsControlledByHumanPlayer) {
                         DrawIdentifierCircle(gameObject.PositionCenter, (short)(soldier != null ? 15 : 25), gameObject.PlayerAsController.PlayersColor);
+                        DrawUsername(gameObject.PlayerAsController.Name, gameObject.PositionCenter, gameObject.PlayerAsController.PlayersColor);
                     }
 
                     // Draw line of view
@@ -173,6 +175,11 @@ namespace MrCrusher {
             GameEnv.StdVideoScreen.Draw(idCircle, color);
             idCircle = new Circle(positionCenter, ++radius);
             GameEnv.StdVideoScreen.Draw(idCircle, color);
+        }
+
+        private static void DrawUsername(string username, Point positionCenter, Color playersColor) {
+            Surface usernameAsSurface = GameEnv.UsernameInGameFont.Render(username, playersColor, true);
+            GameEnv.StdVideoScreen.Blit(usernameAsSurface, new Point(positionCenter.X + 10, positionCenter.Y + 10));
         }
 
         private static void DrawMenuAndStatistics() {
