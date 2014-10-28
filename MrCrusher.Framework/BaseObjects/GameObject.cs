@@ -221,9 +221,14 @@ namespace MrCrusher.Framework.BaseObjects
 
         public DateTime? TimeOfDeath { get; private set; }
         
-        public virtual void Die() {
+        public virtual void Die(IGameObject killer) {
             Health = 0;
             Dead = true;
+
+            if (killer.PlayerAsController != null) {
+                killer.PlayerAsController.BodyCount.IncKill(killer);
+            }
+
             TimeOfDeath = DateTime.Now;
 
             if (GameEnv.GameObjectsToDrawAndMove.All(obj => !obj.IsControlledByHumanPlayer || (obj.IsControlledByHumanPlayer && obj.Dead)) &&

@@ -338,11 +338,11 @@ namespace MrCrusher.Framework.BaseObjects {
             
         }
 
-        public override void Die() {
+        public override void Die(IGameObject killer) {
             SoundHandler.PlayRandomSoldierDiedSound();
             VideoCollection.SetActiveVideo("Soldat_stirbt.png");
 
-            base.Die();
+            base.Die(killer);
 
             if (IsControlledByHumanPlayer == false) {
                 SoundHandler.PlayRandomHahaAndQuotesSound();
@@ -377,7 +377,7 @@ namespace MrCrusher.Framework.BaseObjects {
             Decayed = true;
         }
 
-        public void WasHit(int hitpoints) {
+        public void WasHit(int hitpoints, IGameObject shooter) {
 
             if(Dead || Vulnerable == false) {
                 return;
@@ -386,7 +386,7 @@ namespace MrCrusher.Framework.BaseObjects {
             Health = Health - hitpoints;
 
             if (Health <= 0) {
-                Die();
+                Die(shooter);
             } else {
                 SoundHandler.PlayRandomSoldierWasHitSound();
             }

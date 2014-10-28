@@ -32,12 +32,12 @@ namespace MrCrusher.Framework.Core
                 }
 
                 if (obj1 is ICanSmash && obj1 is MovingObject && ((MovingObject)obj1).Route.Any() && obj2 is ISmashable) {
-                    obj2.Die();
+                    obj2.Die(obj1);
                     return true;
                 } 
 
                 if (obj1 is ISmashable && obj2 is ICanSmash && obj2 is MovingObject && ((MovingObject)obj2).Route.Any()) {
-                    obj1.Die();
+                    obj1.Die(obj2);
                     return true;
                 }
 

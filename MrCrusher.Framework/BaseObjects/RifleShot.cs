@@ -56,10 +56,10 @@ namespace MrCrusher.Framework.BaseObjects {
             VideoCollection.SetActiveVideo(HIT_OBJECT);
             if (obj is ITank) {
                 SoundHandler.PlayRandomTankWasHitWithoutDamageSound();
-                obj.WasHit(0);
+                obj.WasHit(0, Shooter);
             } else {
                 SoundHandler.PlayRandomRifleShotHitsSoftMaterialSound();
-                obj.WasHit(Power);
+                obj.WasHit(Power, Shooter);
             }
 
             StopAndDefuseProjectile();

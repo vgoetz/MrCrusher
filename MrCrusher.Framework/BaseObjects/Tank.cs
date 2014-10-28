@@ -381,16 +381,16 @@ namespace MrCrusher.Framework.BaseObjects {
             return true;
         }
 
-        public override void Die() {
+        public override void Die(IGameObject killer) {
             // Explosionenkaskade
             ExplosionCascadeFactory.CreateExplosionCascade(PositionCenter, RectangleForCollisionDetection.Width / 2, 2, 3, this);
             
             SetSurface("PanzerPlattformZerstoert2.png");
             _towerCurrentSurface = _towerDestroyedVideo.ActiveVideoPlayer.GetAndPlayVideoSprite().Surface;
 
-            base.Die();
+            base.Die(killer);
             if (IsControlledByHumanPlayer && PlayerAsController != null && PlayerAsController.MainControlledSoldier != null) {
-                PlayerAsController.MainControlledSoldier.Die();
+                PlayerAsController.MainControlledSoldier.Die(killer);
             }
 
             if (IsControlledByHumanPlayer == false) {
@@ -400,7 +400,7 @@ namespace MrCrusher.Framework.BaseObjects {
             }
         }
 
-        public void WasHit(int hitpoints) {
+        public void WasHit(int hitpoints, IGameObject shooter) {
             if (Dead || Vulnerable == false) {
                 return;
             }
@@ -408,7 +408,7 @@ namespace MrCrusher.Framework.BaseObjects {
             Health = Health - hitpoints;
 
             if(Health <= 0) {
-                Die();
+                Die(shooter);
             } else {
                 if (hitpoints > 0) {
                     SoundHandler.PlayRandomTankWasHitWithoutDamageSound();

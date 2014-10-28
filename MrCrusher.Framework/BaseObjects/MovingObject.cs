@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.Serialization;
+using MrCrusher.Framework.BaseObjects.Interfaces;
 using MrCrusher.Framework.Core;
 using MrCrusher.Framework.Game.Environment;
 
@@ -145,8 +146,8 @@ namespace MrCrusher.Framework.BaseObjects
             return true;
         }
 
-        public override void Die() {
-            base.Die();
+        public override void Die(IGameObject killer) {
+            base.Die(killer);
             CurrentSpeed = 0.0;
             Accelration = 0.0;
         }

@@ -56,7 +56,7 @@ namespace MrCrusher.Framework.BaseObjects {
             VideoCollection.SetActiveVideo(HIT_OBJECT);
             SoundHandler.PlayRandomGranadeExplodesSound();
             if (obj != null) {
-                obj.WasHit(Power);
+                obj.WasHit(Power, Shooter);
             }
             StopAndDefuseProjectile();
         }

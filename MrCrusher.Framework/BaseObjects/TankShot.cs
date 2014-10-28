@@ -56,7 +56,7 @@ namespace MrCrusher.Framework.BaseObjects {
         public override void HitObject(IHitable obj) {
             VideoCollection.SetActiveVideo(HIT_OBJECT);
             SoundHandler.PlayRandomTankShotExplodingSound();
-            obj.WasHit(Power);
+            obj.WasHit(Power, Shooter);
             StopAndDefuseProjectile();
         }
 

@@ -25,7 +25,7 @@ namespace MrCrusher.Framework.BaseObjects.Interfaces {
         
         bool Dead { get; }
         DateTime? TimeOfDeath { get; }
-        void Die();
+        void Die(IGameObject killer);
         void MarkAsToBeDeleted();
         bool ShouldBeDeleted { get; }
 

@@ -129,10 +129,20 @@ namespace MrCrusher.Framework.Player {
 
     public class PlayerBodyCount {
 
-        public int KilledSoldiers { get; set; }
-        public int KilledTanks { get; set; }
-        public int KilledBunkers { get; set; }
+        public int KilledSoldiers { get; private set; }
+        public int KilledTanks { get; private set; }
+        public int KilledBunkers { get; private set; }
         public int KillsTotal { get { return KilledSoldiers + KilledTanks + KilledBunkers; } }
+
+        public void IncKill(IGameObject killedGameObject) {
+            var soldier = killedGameObject as ISoldier;
+            var tank = killedGameObject as ITank;
+            var bunker = killedGameObject as IBunker;
+
+            if (soldier != null) { KilledSoldiers++; }
+            if (tank != null) { KilledTanks++; }
+            if (bunker != null) { KilledBunkers++; }
+        }
 
         public void Reset() {
             KilledSoldiers = 0;

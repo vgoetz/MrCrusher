@@ -73,7 +73,7 @@ namespace MrCrusher.Framework.Input {
                 // Kill players object
                 if (IsKeyPressed(player, Key.LeftControl) && IsKeyPressed(player, Key.D)) {
                     if (player.CurrentControlledGameObject.Dead == false) {
-                        currentControlledObject.Die();
+                        currentControlledObject.Die(null);
                     }
                 }
 
