@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="SdlDotNet">
       <HintPath>SdlDotNet.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Tao.Sdl">
       <HintPath>..\..\..\SdlDotNet\bin\Tao.Sdl.dll</HintPath>
