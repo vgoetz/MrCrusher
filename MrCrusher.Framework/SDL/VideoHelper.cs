@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using MrCrusher.Framework.Core;
 using MrCrusher.Framework.Game.Environment;
 using SdlDotNet.Graphics;
 
@@ -10,6 +11,11 @@ namespace MrCrusher.Framework.SDL {
     class VideoHelper {
 
         public static List<Surface> CreateVideoFromSprites(string videoFileName) {
+
+            if (GameEnv.RunningAspect == PublicFrameworkEnums.RunningAspect.TestsOnly) {
+                return new List<Surface> {GameEnv.DummySurfaceForTest};
+            }
+
             // Image einlesen
             Surface completeImage = ImageHelper.LoadImage(GameEnv.VideoResourcesSubDir + videoFileName, false);
             Color? transparentColor = ImageHelper.GetTransparentColorFromSDMFile(GameEnv.VideoResourcesSubDir + videoFileName);

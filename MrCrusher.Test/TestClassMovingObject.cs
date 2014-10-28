@@ -10,19 +10,15 @@ using NUnit.Framework;
 namespace MrCrusher.Test
 {
     [TestFixture]
-    class TestClassTankAsMovingObject
-    {
+    class TestClassTankAsMovingObject {
         readonly PlayersTankFactory _tankFactory = new PlayersTankFactory();
-        private MainProgram _program;
         private Player _testPlayer;
 
         [SetUp]
-        public void SetUp()
-        {
+        public void SetUp() {
             GameEnv.TopMenuHeight = 0;
             GameEnv.TopMenuWidth = 0;
-            GameEnv.RunningAspect = PublicFrameworkEnums.RunningAspect.Server;
-            _program = new MainProgram();
+            GameEnv.RunningAspect = PublicFrameworkEnums.RunningAspect.TestsOnly;
             _testPlayer = new Player("Test", true, true);
         }
 
@@ -203,8 +199,8 @@ namespace MrCrusher.Test
 
         [Test]
         public void MovingObjectToTheBottom_OutOfBoundsIsNotAllowed() {
-            int fieldWidth  = GameEnv.StdVideoScreen.Width;
-            int fieldHeight = GameEnv.StdVideoScreen.Height;
+            int fieldWidth = GameEnv.ScreenWidth;
+            int fieldHeight = GameEnv.ScreenHeight;
             var movObj      = _tankFactory.CreateTank(PlayersTankType.PlayersDefaultTank, 1, new Point(0, 0));
             movObj.PlayerAsController = _testPlayer;
             int tankWidth   = movObj.RectangleForCollisionDetection.Width;
@@ -233,8 +229,8 @@ namespace MrCrusher.Test
 
         [Test]
         public void MovingObjectToTheRight_OutOfBoundsIsNotAllowed() {
-            int fieldWidth = GameEnv.StdVideoScreen.Width;
-            int fieldHeight = GameEnv.StdVideoScreen.Height;
+            int fieldWidth = GameEnv.ScreenHeight;
+            int fieldHeight = GameEnv.ScreenWidth;
             var movObj = _tankFactory.CreateTank(PlayersTankType.PlayersDefaultTank, 1, new Point(0, 0));
             movObj.PlayerAsController = _testPlayer;
             int tankWidth = movObj.RectangleForCollisionDetection.Width;

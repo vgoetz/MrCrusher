@@ -81,6 +81,10 @@ namespace MrCrusher.Framework.MediaManagement {
         }
 
         public static Surface GetImage(string imageName) {
+            if (GameEnv.RunningAspect == PublicFrameworkEnums.RunningAspect.TestsOnly) {
+                return GameEnv.DummySurfaceForTest;
+            }
+
             if (_standardImageContainer.ContainsKey(imageName) == false) {
                 throw new ApplicationException(string.Format("Das Image mit dem Namen '{0}' konnte im Container nicht gefunden werden.", imageName));
             }

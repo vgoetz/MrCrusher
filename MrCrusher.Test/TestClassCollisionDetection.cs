@@ -6,6 +6,7 @@ using MrCrusher.Framework.Core;
 using MrCrusher.Framework.Game.Environment;
 using MrCrusher.Framework.Player;
 using NUnit.Framework;
+using SdlDotNet.Graphics;
 
 namespace MrCrusher.Test
 {
@@ -16,9 +17,8 @@ namespace MrCrusher.Test
         private readonly PlayersTankFactory _playersTankFactory = new PlayersTankFactory();
 
         [SetUp]
-        public void SetUp(){
-            GameEnv.RunningAspect = PublicFrameworkEnums.RunningAspect.Server;
-            new MainProgram();
+        public void SetUp() {
+            GameEnv.RunningAspect = PublicFrameworkEnums.RunningAspect.TestsOnly;
             _collisionRectangleForAllTanks = new Rectangle(0, 0, 20, 20);
         }
 
@@ -373,7 +373,7 @@ namespace MrCrusher.Test
             Assert.AreEqual(0, CollisionDetection.CollisionDetectionAndHandlingForAllDrawingObjects(), "# Collisions");
         }
 
-        public static void SetPlayerAnd3EnemysObjects() {
+        private static void SetPlayerAnd3EnemysObjects() {
 
             var localPlayer = new Player("TestPlayer", true, true);
             localPlayer.CreateNewSoldierAtRandomPosition();
@@ -382,14 +382,9 @@ namespace MrCrusher.Test
             var enemysSoldierFactory = new EnemysSoldierFactory();
             var enemysTankFactory = new EnemysTankFactory();
 
-            if (GameEnv.RunningAspect == PublicFrameworkEnums.RunningAspect.Server) {
-
-                enemysTankFactory.CreateTank(EnemysTankType.EnemyTankT2000, 100, new Point(430, 230));
-                enemysSoldierFactory.CreateSoldier(EnemysSoldierType.Soldat5, 25, new Point(150, 150));
-                enemysSoldierFactory.CreateSoldier(EnemysSoldierType.Soldat5, 30, new Point(450, 250));
-            }
-
+            enemysTankFactory.CreateTank(EnemysTankType.EnemyTankT2000, 100, new Point(430, 230));
+            enemysSoldierFactory.CreateSoldier(EnemysSoldierType.Soldat5, 25, new Point(150, 150));
+            enemysSoldierFactory.CreateSoldier(EnemysSoldierType.Soldat5, 30, new Point(450, 250));
         }
-        
     }
 }

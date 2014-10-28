@@ -9,20 +9,15 @@ using NUnit.Framework;
 namespace MrCrusher.Test
 {
     [TestFixture]
-    class TestClassFactories
-    {
-        private MainProgram _program;
+    class TestClassFactories {
 
         [SetUp]
-        public void SetUp()
-        {
-            _program = new MainProgram();
-            GameEnv.RunningAspect = PublicFrameworkEnums.RunningAspect.Server;
+        public void SetUp() {
+            GameEnv.RunningAspect = PublicFrameworkEnums.RunningAspect.TestsOnly;
         }
 
         [Test]
-        public void RifleShotFactory_CreateShot_1(){
-
+        public void RifleShotFactory_CreateShot_1() {
             
             var shotFactory = new RifleShotFactory();
             var startPoint = new Point(0, 0);

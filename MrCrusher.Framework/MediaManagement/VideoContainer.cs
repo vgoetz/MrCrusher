@@ -81,6 +81,10 @@ namespace MrCrusher.Framework.MediaManagement {
         }
 
         public static SpriteVideoData GetVideo(string videoName) {
+            if (GameEnv.RunningAspect == PublicFrameworkEnums.RunningAspect.TestsOnly) {
+                return new SpriteVideoData("dummyImage.png");
+            }
+
             if(_standardVideoContainer.ContainsKey(videoName) == false) {
                 throw new ApplicationException(string.Format("Das Video mit dem Namen '{0}' konnte im Container nicht gefunden werden.", videoName));
             }

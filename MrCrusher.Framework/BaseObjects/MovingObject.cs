@@ -27,12 +27,12 @@ namespace MrCrusher.Framework.BaseObjects
         }
 
         protected MovingObject(bool isControledByHumanPlayer, string imageFileName, string videoFileName, int health) 
-            : base(isControledByHumanPlayer, imageFileName, videoFileName) {
+            : base(imageFileName, videoFileName) {
             InitComponents(health);
         }
 
         protected MovingObject(bool isControledByHumanPlayer, string imageFileName, string videoFileName, int health, Point positionCenter)
-            : base(isControledByHumanPlayer, imageFileName, videoFileName, positionCenter) {
+            : base(imageFileName, videoFileName, positionCenter) {
             InitComponents(health);
         }
 
@@ -124,10 +124,10 @@ namespace MrCrusher.Framework.BaseObjects
 
             if (IsControlledByHumanPlayer) {
                 // The player is not allowed to go out of screen borders
-                if (position.X < 0 + GetCurrentSurface().Width / 2 ||
-                    position.Y < 0 + GameEnv.TopMenuHeight + GetCurrentSurface().Height / 2 ||
-                    position.X > GameEnv.ScreenWidth - GetCurrentSurface().Width / 2 ||
-                    position.Y > GameEnv.ScreenHeight - GetCurrentSurface().Height / 2) {
+                if (position.X < 0 + RectangleForCollisionDetection.Width / 2 ||
+                    position.Y < 0 + GameEnv.TopMenuHeight + RectangleForCollisionDetection.Height / 2 ||
+                    position.X > GameEnv.ScreenWidth - RectangleForCollisionDetection.Width / 2 ||
+                    position.Y > GameEnv.ScreenHeight - RectangleForCollisionDetection.Height / 2) {
                     return false;
                 }
             }

@@ -22,7 +22,7 @@ namespace MrCrusher.Framework.SpecialObjects {
         private readonly Dictionary<VideoPlayerCollection, Point> _explosionVideos;
 
         public ExplosionCascade(string surfaceFileName, VideoStartParameter videoParameter, Point positionCenter, int radius, int totalNumberOfExplosions, int framesBetweenExplosions)
-            : base(false, surfaceFileName, videoParameter, positionCenter) {
+            : base(surfaceFileName, videoParameter, positionCenter) {
 
             _tempVideoStartParameter = videoParameter;
             _positionCenter = positionCenter;

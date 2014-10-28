@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using MrCrusher.Framework.AI;
 using MrCrusher.Framework.BaseObjects.Interfaces;
+using MrCrusher.Framework.Core;
 using MrCrusher.Framework.Drawable;
 using MrCrusher.Framework.Game.Environment;
 using MrCrusher.Framework.MediaManagement;
@@ -90,29 +91,33 @@ namespace MrCrusher.Framework.BaseObjects
             return VideoCollection == null ? null : VideoCollection.ActiveVideoPlayer.VideoParameter.VideoFileName;
         }
 
-        protected GameObject(bool isControledByHumanPlayer, string surfaceFileName, VideoStartParameter videoParameter) {
-            if(string.IsNullOrEmpty(surfaceFileName) == false) {
+        protected GameObject(string surfaceFileName, VideoStartParameter videoParameter) {
+            if (GameEnv.RunningAspect == PublicFrameworkEnums.RunningAspect.TestsOnly) {
+                surfaceFileName = "dummyImage.png";
+            }
+
+            if (string.IsNullOrEmpty(surfaceFileName) == false) {
                 SetSurface(surfaceFileName);
             }
 
-            if(videoParameter != null) {
+            if (videoParameter != null) {
                 VideoCollection = new VideoPlayerCollection(videoParameter, true);
             }
             
             InitComponents();
         }
 
-        protected GameObject(bool isControledByHumanPlayer, string surfaceFileName, VideoStartParameter videoParameter, Point positionCenter)
-            : this(isControledByHumanPlayer, surfaceFileName, videoParameter) {
+        protected GameObject(string surfaceFileName, VideoStartParameter videoParameter, Point positionCenter)
+            : this(surfaceFileName, videoParameter) {
             PositionCenter = positionCenter;
         }
 
-        protected GameObject(bool isControledByHumanPlayer, string surfaceFileName, string videoFileName)
-            : this(isControledByHumanPlayer, surfaceFileName, !string.IsNullOrEmpty(videoFileName) ? new VideoStartParameter(videoFileName, true) : null) {
+        protected GameObject(string surfaceFileName, string videoFileName)
+            : this(surfaceFileName, !string.IsNullOrEmpty(videoFileName) ? new VideoStartParameter(videoFileName, true) : null) {
         }
 
-        protected GameObject(bool isControledByHumanPlayer, string surfaceFileName, string videoFileName, Point positionCenter)
-            : this(isControledByHumanPlayer, surfaceFileName, !string.IsNullOrEmpty(videoFileName) ? new VideoStartParameter(videoFileName, true) : null) {
+        protected GameObject(string surfaceFileName, string videoFileName, Point positionCenter)
+            : this(surfaceFileName, !string.IsNullOrEmpty(videoFileName) ? new VideoStartParameter(videoFileName, true) : null) {
             PositionCenter = positionCenter;
         }
 
