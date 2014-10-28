@@ -1,5 +1,5 @@
-Mr. Crusher
-=========
+Mr. Crusher ![BuildStatusOnAppVeyor](https://ci.appveyor.com/api/projects/status/github/vgoetz/MrCrusher "Build status")
+===========
 
 yet another cool 2D tank game ;-)
 
