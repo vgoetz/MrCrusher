@@ -3,6 +3,9 @@ Mr. Crusher
 
 yet another cool 2D tank game ;-)
 
+Changelog: Version 0.270
+- Fehlende SdlDotNet.dll nun auch wieder vorhanden
+
 Changelog: Version 0.269
 - Usernamen werden nun auch im Spielfeld eingeblendet<br>
 ![UsernamesInGame](https://github.com/vgoetz/MrCrusher/blob/master/MrCrusher/Screenshots/UsernamenInGameEinblenden.png "Who is who ... Teil 2")<br>
