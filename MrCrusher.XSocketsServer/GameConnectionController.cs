@@ -19,7 +19,7 @@ namespace MrCrusher.XSocketsServer {
 
                     if (GameEnv.Players.Any(player => player.Name == newName) == false) {
 
-                        var newPlayer = new Player(newName, false, false) { ClientGuid = ClientGuid };
+                        var newPlayer = new Player(newName, false, false) { ClientGuid = ConnectionId};
                         newPlayer.CreateNewSoldierAtRandomPosition();
                         GameEnv.Players.Add(newPlayer);
 
@@ -28,25 +28,15 @@ namespace MrCrusher.XSocketsServer {
                 }};
 
         }
+        
+        public void SendGameObjectsToClients(IGameSessionTransferObject gameSessionTransferObject) {
+            //Console.WriteLine("--> sending objects -->");
+            this.InvokeToAll(gameSessionTransferObject, "HandleNewDataFromServer");
+        }        
+        
+        public void HandleKeyAndMouseEvents(KeyboardAndMouseInteractionTO keyAndMouseTo) {
 
-        //public void GameConnection(Dictionary<Key, bool> keyboardInteraction) {
-
-        //    var player = GameEnv.Players.FirstOrDefault(p => p.ClientGuid == ClientGuid);
-
-        //    if (player != null) {
-        //        player.LastPlayersKeybardInteraction.KeyPressedList = keyboardInteraction;
-
-        //        //Console.WriteLine("<-- Players interactions from client {0} received. <--");
-        //        string keys = keyboardInteraction.Aggregate(string.Empty, (current, keyValue) => current + ", " + keyValue.Key);
-        //        Console.WriteLine("{0}: Keys received: {1}", player.Name, keys);
-        //    } else {
-        //        Console.WriteLine("ERROR: <-? Unknow player/client send his interactions - ClientGuid is unknown! <--");
-        //    }
-        //}
-
-        public void GameConnection(KeyboardAndMouseInteractionTO keyAndMouseTo) {
-
-            var player = GameEnv.Players.FirstOrDefault(p => p.ClientGuid == ClientGuid);
+            var player = GameEnv.Players.FirstOrDefault(p => p.ClientGuid == ConnectionId);
 
             if (player != null) {
                 player.LastPlayersKeybardInteraction.KeyPressedList = keyAndMouseTo.KeyPressedList;
@@ -64,11 +54,6 @@ namespace MrCrusher.XSocketsServer {
             } else {
                 Console.WriteLine("ERROR: <-? Unknow player/client send his interactions - ClientGuid is unknown! <--");
             }
-        }
-        
-        public void SendGameObjectsToClients(IGameSessionTransferObject gameSessionTransferObject) {
-            //Console.WriteLine("--> sending objects -->");
-            this.SendToAll(gameSessionTransferObject, "GameConnection");
         }
     }
 }

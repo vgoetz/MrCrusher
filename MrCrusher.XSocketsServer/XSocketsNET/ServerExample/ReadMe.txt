@@ -16,14 +16,13 @@ public static class XSocketsBootstrap
     public static void Start()
     {
         container = XSockets.Plugin.Framework.Composable.GetExport<IXSocketServerContainer>();
-        container.StartServers();
+        container.Start();        
     }        
 }
 
 //2: Console Application
 using (var container = XSockets.Plugin.Framework.Composable.GetExport<IXSocketServerContainer>())
 {
-    container.StartServers();
-    Console.WriteLine("Server started, hit enter to quit");
+    container.Start();
     Console.ReadLine();
 }

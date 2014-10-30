@@ -37,12 +37,12 @@
     <ApplicationIcon>Panzer.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SdlDotNet, Version=6.1.0.0, Culture=neutral, PublicKeyToken=26ad4f7e10c61408, processorArchitecture=MSIL">
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ServiceStack.Text, Version=3.9.69.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Client.3.0.6.2\lib\net40\ServiceStack.Text.dll</HintPath>
+    <Reference Include="SdlDotNet, Version=6.1.0.0, Culture=neutral, PublicKeyToken=26ad4f7e10c61408, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,27 +53,36 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="XSockets.Client40">
-      <HintPath>..\packages\XSockets.Client.3.0.6.2\lib\net40\XSockets.Client40.dll</HintPath>
+      <HintPath>..\packages\XSockets.Client.4.0.0\lib\net40\XSockets.Client40.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="XSockets.Core, Version=3.0.6.0, Culture=neutral, PublicKeyToken=e0d515f22052a108, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Core.3.0.6\lib\net40\XSockets.Core.dll</HintPath>
+    <Reference Include="XSockets.Core">
+      <HintPath>..\packages\XSockets.Core.4.0.0\lib\net40\XSockets.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="XSockets.Core.Common, Version=3.0.6.0, Culture=neutral, PublicKeyToken=e0d515f22052a108, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Core.3.0.6\lib\net40\XSockets.Core.Common.dll</HintPath>
+    <Reference Include="XSockets.Core.Common">
+      <HintPath>..\packages\XSockets.Core.4.0.0\lib\net40\XSockets.Core.Common.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="XSockets.Core.Communication, Version=3.0.6.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Dropbox\MrCrusher\MrCrusher\Release\XSockets.Core.Communication.dll</HintPath>
     </Reference>
-    <Reference Include="XSockets.Plugin.Framework, Version=1.4.3.0, Culture=neutral, PublicKeyToken=e0d515f22052a108, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Plugin.Framework.1.4.3\lib\XSockets.Plugin.Framework.dll</HintPath>
+    <Reference Include="XSockets.CustomProtocol">
+      <HintPath>..\packages\XSockets.Core.4.0.0\lib\net40\XSockets.CustomProtocol.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="XSockets.Serialization, Version=3.0.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\XSockets.Core.3.0.6\lib\net40\XSockets.Serialization.dll</HintPath>
+    <Reference Include="XSockets.Plugin.Framework">
+      <HintPath>..\packages\XSockets.Plugin.Framework.4.0.0\lib\net40\XSockets.Plugin.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XSockets.Protocol">
+      <HintPath>..\packages\XSockets.Core.4.0.0\lib\net40\XSockets.Protocol.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XSockets.Serialization">
+      <HintPath>..\packages\XSockets.Core.4.0.0\lib\net40\XSockets.Serialization.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>

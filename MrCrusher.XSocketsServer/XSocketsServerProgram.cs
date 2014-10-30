@@ -40,7 +40,7 @@ namespace MrCrusher.XSocketsServer {
                     _gameConCtrl = new GameConnectionController();
                     _mainProgram.SendGameObjectStatesToClients += SendGameObjectsToClients;
 
-                    container.StartServers(withInterceptors : true);
+                    container.Start();
 
                     foreach (var server in container.Servers) {
                         Console.Write("Start XSockets-Server: ");
@@ -51,7 +51,7 @@ namespace MrCrusher.XSocketsServer {
 
                     //Console.WriteLine("Hit any key to quit server");
                     //Console.ReadKey();
-                    container.StopServers();
+                    container.Stop();
                 }
 
             } else {

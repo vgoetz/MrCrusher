@@ -7,6 +7,7 @@ using MrCrusher.Framework.Game.Environment;
 using MrCrusher.Framework.Input;
 using MrCrusher.Framework.Player;
 using XSockets.Client40;
+using XSockets.Client40.Common.Event.Arguments;
 using XSockets.Core.XSocket.Helpers;
 using System.Drawing;
 
@@ -36,19 +37,23 @@ namespace MrCrusher.XSocketsClient {
             _mainProgram.SendClientInteractionsToServer += SendPlayerInteractions;
 
             Thread.Sleep(3000);
-            string connectionString = String.Format("ws://{0}:4502/GameConnectionController?clientName={1}", serverIpAdress, playersName);
+            string connectionString = String.Format("ws://{0}:4502/GameConnectionController", serverIpAdress);
             Console.WriteLine("Create Client for connection {0} ...", connectionString);
             _client = new XSocketClient(connectionString, "*");
+            _client.QueryString.Add("clientName", playersName);
 
-            _client.OnOpen += SocketOnOpen;
-            _client.OnError += SocketOnError;
-            _client.OnClose += client_OnClose;
+            _client.OnConnected += ClientConnected;
+            _client.OnDisconnected += ClientDisconnected;
+            _client.OnError += HandleError;
 
             ConsoleKeyInfo? key = null;
             while (key != new ConsoleKeyInfo(Convert.ToChar(27), ConsoleKey.Escape, false, false, false)) {
                 try {
+                    _client.Controller("GameConnection").On<IGameSessionTransferObject>("HandleNewDataFromServer", HandleNewDataFromServer);
                     _client.Open();
+                    
                     _mainProgram.Run(Fps);
+
                 } catch (Exception e) {
                     Console.WriteLine("\nException: {0}", e.Message);
 
@@ -59,8 +64,7 @@ namespace MrCrusher.XSocketsClient {
             }
 
             try {
-                _client.UnBind("GameConnection");
-                _client.Close();
+                _client.Disconnect();
             
             // ReSharper disable once EmptyGeneralCatchClause --- Das ist so gewollt
             } catch {}
@@ -80,30 +84,30 @@ namespace MrCrusher.XSocketsClient {
                     MiddleButtonPressed    = mouseInteraction.MiddleButtonPressed
                 };
 
-                _client.Send(keyAndMouseTo, "GameConnection");
+                _client.Controller("GameConnection").Invoke<KeyboardAndMouseInteractionTO>("HandleKeyAndMouseEvents", keyAndMouseTo);
             }
         }
 
         //When the connection is open we bind with confirmation
-        private static void SocketOnOpen(object sender, EventArgs eventArgs) {
+        private static void ClientConnected(object sender, EventArgs eventArgs) {
             Console.WriteLine("Open Socket ...");
-            _client.Bind("GameConnection", OnCallbackUsed, OnConnenctionConfirmed);
+            //_client.Bind("GameConnection", OnCallbackUsed, OnConnenctionConfirmed);
         }
-
-        private static void SocketOnError(object sender, XSockets.Client40.Common.Event.Interface.ITextArgs e) {
-            Console.WriteLine("Socket-Error: " + e.data + e.controller);
-        }
-        static void client_OnClose(object sender, EventArgs e) {
+        static void ClientDisconnected(object sender, EventArgs e) {
             Console.WriteLine("Connection closed");
         }
-        private static void OnConnenctionConfirmed(XSockets.Client40.Common.Event.Interface.ITextArgs textArgs) {
-            Console.WriteLine("Connection confirmed " + textArgs.data);
-            GameEnv.LocalPlayer.ClientGuid = _client.ClientInfo.ClientGuid;
+        private static void HandleError(object sender, OnErrorArgs onErrorArgs) {
+            Console.WriteLine("Socket-Error: " + onErrorArgs.Exception.Message);
         }
 
-        private static void OnCallbackUsed(XSockets.Client40.Common.Event.Interface.ITextArgs textArgs) {
-            string data = textArgs.data;
-            var receivedData = data.Deserialize<GameSessionTransferObject>();
+        //private static void OnConnenctionConfirmed(XSockets.Client40.Common.Event.Interface.ITextArgs textArgs) {
+        //    Console.WriteLine("Connection confirmed " + textArgs.data);
+        //    GameEnv.LocalPlayer.ClientGuid = _client.ClientInfo.ClientGuid;
+        //}
+
+        private static void HandleNewDataFromServer(IGameSessionTransferObject receivedData) {
+            //string data = textArgs.data;
+            //var receivedData = data.Deserialize<GameSessionTransferObject>();
             if (receivedData != null) {
                 if (receivedData.ImageTransferObjects == null || !receivedData.ImageTransferObjects.Any() || receivedData.ImageTransferObjects.All(ito => ito == null)) {
                     throw new ApplicationException("Daten vom Server empfangen aber keine Image-Daten vorhanden.");
