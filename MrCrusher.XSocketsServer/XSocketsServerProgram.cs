@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 using MrCrusher.Framework.Core;
 using MrCrusher.Framework.Game.Environment;
 using MrCrusher.Framework.Player;
@@ -35,6 +37,9 @@ namespace MrCrusher.XSocketsServer {
             GameStartupConditions.SetPlayersTankAndBunkerAtRandomLocaltionAtTheCenter();
 
             if (multiplayer) {
+                // Bugfix for lost directories while using "new Uri(...)" inside of XSockets
+                Composable.AddLocation(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+
                 using (var container = Composable.GetExport<IXSocketServerContainer>()) {
 
                     _gameConCtrl = new GameConnectionController();
