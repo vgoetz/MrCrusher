@@ -3,6 +3,9 @@ Mr. Crusher ![BuildStatusOnAppVeyor](https://ci.appveyor.com/api/projects/status
 
 yet another cool 2D tank game ;-)
 
+Changelog: Version 0.274
+- Einige Bugfixes
+    
 Changelog: Version 0.270
 - Fehlende SdlDotNet.dll nun auch wieder vorhanden
 
