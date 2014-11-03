@@ -65,6 +65,8 @@ namespace MrCrusher.Framework.Game.Environment {
         public static DateTime? EndTime;
 
         public static PublicFrameworkEnums.RunningAspect RunningAspect;
+        public static bool RunWithServer { get; set; }
+
 
         public static Surface StdVideoScreen;
 

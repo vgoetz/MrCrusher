@@ -107,9 +107,10 @@ namespace MrCrusher {
                     CollisionDetection.CollisionDetectionAndHandlingForAllDrawingObjects();
 
                     DrawHandler.DoDrawings();
-                    
 
-                    SendGameObjectStatesToClients(EventArgs.Empty);
+                    if (GameEnv.RunWithServer) {
+                        SendGameObjectStatesToClients(EventArgs.Empty);
+                    }
                     break;
 
                 case PublicFrameworkEnums.RunningAspect.Client:

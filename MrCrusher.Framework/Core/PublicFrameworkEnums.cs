@@ -4,7 +4,7 @@
             DedicatedServer,
             Server,
             Client,
-            TestsOnly
+            TestsOnly,
         }
     }
 }

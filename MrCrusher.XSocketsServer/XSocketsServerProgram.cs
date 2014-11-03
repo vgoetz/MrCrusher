@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
 using MrCrusher.Framework.Core;
 using MrCrusher.Framework.Game.Environment;
 using MrCrusher.Framework.Player;
@@ -18,13 +16,14 @@ namespace MrCrusher.XSocketsServer {
 
         static void Main(string[] args) {
 
-            bool multiplayer = true;
-
-            Console.WriteLine("Starting server\n");
             if (args.Length > 0) {
+                GameEnv.RunWithServer = true;
+                Console.WriteLine("Starting server\n");
                 Console.WriteLine("Parameter: [ {0} ]\n", String.Join(" | ", args));
+            } else {
+                GameEnv.RunWithServer = false;
             }
-            
+
             string playersName = args.Length > 0 ? args[0] : "ServerPlayer";
 
             GameEnv.RunningAspect = PublicFrameworkEnums.RunningAspect.Server;
@@ -36,29 +35,33 @@ namespace MrCrusher.XSocketsServer {
 
             GameStartupConditions.SetPlayersTankAndBunkerAtRandomLocaltionAtTheCenter();
 
-            if (multiplayer) {
-                // Bugfix for lost directories while using "new Uri(...)" inside of XSockets
-                Composable.AddLocation(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+            if (GameEnv.RunWithServer) {
+                
+                Composable.ClearPluginFilters();
+                try {
+                    using (var container = Composable.GetExport<IXSocketServerContainer>()) {
 
-                using (var container = Composable.GetExport<IXSocketServerContainer>()) {
+                        _gameConCtrl = new GameConnectionController();
+                        _mainProgram.SendGameObjectStatesToClients += SendGameObjectsToClients;
 
-                    _gameConCtrl = new GameConnectionController();
-                    _mainProgram.SendGameObjectStatesToClients += SendGameObjectsToClients;
+                        container.StartServers(withInterceptors: true);
 
-                    container.StartServers(withInterceptors : true);
+                        foreach (var server in container.Servers) {
+                            Console.Write("Start XSockets-Server: ");
+                            Console.WriteLine(server.ConfigurationSetting.Endpoint);
+                        }
 
-                    foreach (var server in container.Servers) {
-                        Console.Write("Start XSockets-Server: ");
-                        Console.WriteLine(server.ConfigurationSetting.Endpoint);
+                        _mainProgram.Run(Fps);
+
+                        //Console.WriteLine("Hit any key to quit server");
+                        //Console.ReadKey();
+                        container.StopServers();
                     }
-
-                    _mainProgram.Run(Fps);
-
-                    //Console.WriteLine("Hit any key to quit server");
-                    //Console.ReadKey();
-                    container.StopServers();
+                } catch (Exception e) {
+                    Console.WriteLine("Error: Couldn´t start server.\n" +
+                                      "Exception: {0}", e.Message);
                 }
-
+                
             } else {
                 _mainProgram.Run(Fps);
             }

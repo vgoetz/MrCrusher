@@ -106,7 +106,7 @@ namespace MrCrusher.XSocketsClient {
             var receivedData = data.Deserialize<GameSessionTransferObject>();
             if (receivedData != null) {
                 if (receivedData.ImageTransferObjects == null || !receivedData.ImageTransferObjects.Any() || receivedData.ImageTransferObjects.All(ito => ito == null)) {
-                    throw new ApplicationException("Daten vom Server empfangen aber keine Image-Daten vorhanden.");
+                    // throw new ApplicationException("Daten vom Server empfangen aber keine Image-Daten vorhanden.");
                     // Hint: Never use nested Interface-Types in sended type! Always use class instead!
                 }
 
